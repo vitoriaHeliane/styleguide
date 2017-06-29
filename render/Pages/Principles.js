@@ -6,77 +6,74 @@ import directSVG from '../assets/svg/direct.svg'
 import boldSVG from '../assets/svg/bold.svg'
 import Template from '../Template'
 
-//eslint-disable-next-line
-class Principles extends Component {
-  render () {
-    return (
-      <Template>
-        <div className="Principles">
-          <div className="mt0 w-100 pa5 overflow-hidden">
-            <h1 className="f2-m f2-l ffmark ttu fl w-auto mt0 br mb0-ns bw1 b--silver pr4 mr4 tracked lh-solid" id="principios">Princípios<br />de Design</h1>
-            <h2 className="f2-m f2-l ffmark ttu fw2 fl w-auto mt0 mb0-ns lh-solid">Como fazemos &<br />Por que fazemos</h2>
-          </div>
-          <section className="vh-100-ns pv4 pa0-ns relative overflow-hidden">
-            <img alt="Solid" src={solidSVG} className="w-100 w-100-ns ilust vcenter-ns pv5 pa0-ns" />
-            <div className="vcenter-ns pl4">
-              <div className="pa3 pa4-l pb5">
-                <h3 className="f1 ma0 mb3">Sólido</h3>
-                <h4 className="gray f3 fw5 ma0 mb2 lh-title measure-narrow">Pense modular.<br /> Seja extensível.<br /> Construa escalável.</h4>
-                <p className="f4 ma0 lh-copy measure-narrow">Crie sem limitações, pensando sempre em produtos escaláveis que cresçam com o ecossistema.</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="vh-100-ns pv4 pa0-ns relative overflow-hidden" >
-            <img alt="Global" src={globalSVG} className="w-100 w-100-ns ilust vcenter-ns pv5 pa0-ns" />
-            <div className="vcenter-ns pl4">
-              <div className="pa3 pa4-l pb5">
-                <h3 className="f1 ma0 mb3">Global</h3>
-                <h4 className="gray f3 fw5 ma0 mb2 lh-title measure-narrow">Nós acreditamos em diversidade. <br />Global significa local.</h4>
-                <p className="f4 ma0 lh-copy measure-narrow">Onde quer que esteja, sempre pense no contexto local. Isto significa conhecer nossos usuários, falar sua língua e ser relevante para sua cultura.</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="vh-100-ns pv4 pa0-ns relative overflow-hidden" >
-            <img alt="Trustworthy" src={trustSVG} className="w-100 w-100-ns ilust vcenter-ns pv5 pa0-ns" />
-
-            <div className="vcenter-ns pl4">
-              <div className="bg-white pa3 pa4-l pb5">
-                <h3 className="f1 ma0 mb3">Confiável</h3>
-                <h4 className="gray f3 fw5 ma0 mb2 lh-title measure-narrow">Conquiste a confiança das pessoas.</h4>
-                <p className="f4 ma0 lh-copy measure-narrow">As pessoas devem se sentir seguras enquanto usam nossas interfaces. Estamos todos juntos nessa, pensando e fazendo nosso melhor pelo ecossistema.</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="vh-100-ns pv4 pa0-ns relative overflow-hidden" >
-            <img alt="Direct" src={directSVG} className="w-100 w-100-ns ilust vcenter-ns pv5 pa0-ns" />
-
-            <div className="vcenter-ns pl4">
-              <div className="bg-white pa3 pa4-l pb5">
-                <h3 className="f1 ma0 mb3">Direto</h3>
-                <h4 className="gray f3 fw5 ma0 mb2 lh-title measure-narrow">Ajudamos pessoas a resolver problemas.</h4>
-                <p className="f4 ma0 lh-copy measure-narrow">Foque no que é necessário para o usuário completar seu trabalho. Queremos que as pessoas completem suas atividades com o mínimo de esforço e o máximo de eficiência.</p>
-              </div>
-            </div>
-          </section>
-
-          <section className="vh-100-ns bg-black pv4 pa0-ns relative overflow-hidden" >
-            <img alt="Bold" src={boldSVG} className="w-100 w-100-ns ilust vcenter-ns pv5 pa0-ns" />
-
-            <div className="vcenter-ns pl4">
-              <div className="pa3 pa4-l pb5">
-                <h3 className="f1 ma0 mb3 white">Audacioso</h3>
-                <h4 className="gray f3 fw5 ma0 mb2 lh-title measure-narrow white">Experimentação sem medo.</h4>
-                <p className="f4 ma0 lh-copy measure-narrow white">Sempre haverá riscos — só lembre que você é sempre o dono do resultado. É melhor pedir desculpas que pedir licença.</p>
-              </div>
-            </div>
-          </section>
-        </div>
-      </Template>
-    )
+const principles = [
+  {
+    title: 'Solid',
+    mantras: ['Think modular', 'Be extensible', 'Build scalable'],
+    description: 'Create without limitations, always thinking about scalable products that grow with the ecosystem.'
+  },
+  {
+    title: 'Global',
+    mantras: ['We believe in diversity', 'Global means local'],
+    description: 'Wherever you are, always think of the local context. This means knowing our users, speaking their language and being relevant to their culture.'
+  },
+  {
+    title: 'Trustworthy',
+    mantras: ['Get people\'s confidence'],
+    description: 'People should feel safe using our interfaces. We are all in this together, thinking and doing our best for the ecosystem.'
+  },
+  {
+    title: 'Direct',
+    mantras: ['We help people to solve problems'],
+    description: 'Focus on what it takes for the user to complete his or her work. We want people to complete their activities with minimal effort and maximum efficiency.'
+  },
+  {
+    title: 'Audacious',
+    mantras: ['Experimentation without fear'],
+    description: 'There will always be risks - just remember that you are always the owner of the result. It\'s better to apologize than to ask for permission.'
   }
-}
+]
 
-export default Principles
+export default function Principles() {
+  const titleStyle = "f1 dib black-70 lh-copy-ns ma0"
+  return (
+    <Template>
+      <div>
+        <div className="mb5">
+          <h1 className={`${titleStyle} br-ns bb-0-ns bb b--black-70 bw3-ns bw3 pr4-ns pb3 pb0-ns mr4-ns`}>
+            Design
+            <br />
+            principles
+          </h1>
+          <h1 className={`${titleStyle} mt3 mt0-ns fw2`}>
+            How we do it
+            <br />
+            and why
+          </h1>
+        </div>
+        <section>
+        {
+          principles.map(({title, mantras, description}) => (
+            <div className="mb4 mb5-ns">
+              <h2 className="f1 ma0 mb3 mb4-ns black-70">{title}</h2>
+              <div className="mb4">
+                {
+                  mantras.map(mantra => (
+                    <h4
+                      className="gray f3 fw5 ma0 mb2 measure-narrow"
+                      key={mantra}
+                    >
+                      {mantra}
+                    </h4>
+                  ))
+                }
+              </div>
+              <h4 className="f3 fw4 black-80 ma0 lh-copy w-100 w-70-m w-50-l w-40-xl w-30-xxl">{description}</h4>
+            </div>
+          ))
+        }
+        </section>
+      </div>
+    </Template>
+  )
+}

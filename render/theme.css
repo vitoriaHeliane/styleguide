@@ -6,3 +6,15 @@ table code,
 li code {
   color: rgb(0, 151, 157);
 }
+
+@media (min-width: 104em) {
+  .w-40-xl {
+    width: 40%;
+  }
+}
+
+@media (min-width: 132em) {
+  .w-30-xxl {
+    width: 30%;
+  }
+}

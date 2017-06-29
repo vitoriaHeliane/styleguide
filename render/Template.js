@@ -25,7 +25,7 @@ export default function Template({children}) {
         ]}
       />
       <Sidebar />
-      <main className="ph5 pt4 fl h-100 w-100 w-80-ns">
+      <main className="ph3 ph5-ns pt4 fl h-100 w-100 w-80-ns">
         {children}
       </main>
     </div>
