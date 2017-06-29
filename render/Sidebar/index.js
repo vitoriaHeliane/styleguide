@@ -7,13 +7,16 @@ import NavSection from './NavSection.js'
 import NavItem from './NavItem.js'
 import logoSVG from '../assets/svg/logo.svg'
 
+function isCurrent(regex) {
+  return window && window.location ? regex.test(window.location.pathname) : false
+}
 
 function generateComponentsSections(components, type) {
   const sectionHref = `/${type.toLowerCase()}`
   const regex = new RegExp(`^${sectionHref}`)
   return (
     <NavSection
-      current={window && window.location ? regex.test(window.location.pathname) : false }
+      current={isCurrent(regex)}
       name={type}
       key={type}
     >
@@ -45,6 +48,15 @@ export default function Sidebar() {
             <img src={logoSVG} alt="VTEX" />
           </Link>
           <div className="pv3 pv4-l">
+            <NavSection
+              current={isCurrent(/^\/(howto)/)}
+              name="How-to"
+            >
+              <NavItem
+                href="/howto/install"
+                name="Install"
+              />
+            </NavSection>
             {generateComponentsSections(components, 'Components')}
             {generateComponentsSections(elements, 'Elements')}
           </div>
