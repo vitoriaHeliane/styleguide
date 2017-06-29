@@ -1,21 +1,17 @@
-import React, { Component, PropTypes } from 'react'
+import React from 'react'
+import Icon from 'vtex.icon'
+import PropTypes from 'prop-types'
 
-//eslint-disable-next-line
-class NavList extends Component {
-  render () {
-    const {children} = this.props
-    return (
-      <div className="NavList">
-        <ul className="ma0 pa0 list f5 fw1">
-          {children}
-        </ul>
-      </div>
-    )
-  }
+export default function NavList ({children}) {
+  return (
+    <div>
+      <ul className="ma0 pa0 list f5 fw1">
+        {children}
+      </ul>
+    </div>
+  )
 }
 
 NavList.propTypes = {
   children: PropTypes.node,
 }
-
-export default NavList
