@@ -1,41 +1,36 @@
-import React, { Component } from 'react'
-import solidSVG from '../assets/svg/solid.svg'
-import globalSVG from '../assets/svg/global.svg'
-import trustSVG from '../assets/svg/trust.svg'
-import directSVG from '../assets/svg/direct.svg'
-import boldSVG from '../assets/svg/bold.svg'
+import React from 'react'
 import Template from '../Template'
 
 const principles = [
   {
     title: 'Solid',
     mantras: ['Think modular', 'Be extensible', 'Build scalable'],
-    description: 'Create without limitations, always thinking about scalable products that grow with the ecosystem.'
+    description: 'Create without limitations, always thinking about scalable products that grow with the ecosystem.',
   },
   {
     title: 'Global',
     mantras: ['We believe in diversity', 'Global means local'],
-    description: 'Wherever you are, always think of the local context. This means knowing our users, speaking their language and being relevant to their culture.'
+    description: 'Wherever you are, always think of the local context. This means knowing our users, speaking their language and being relevant to their culture.',
   },
   {
     title: 'Trustworthy',
     mantras: ['Get people\'s confidence'],
-    description: 'People should feel safe using our interfaces. We are all in this together, thinking and doing our best for the ecosystem.'
+    description: 'People should feel safe using our interfaces. We are all in this together, thinking and doing our best for the ecosystem.',
   },
   {
     title: 'Direct',
     mantras: ['We help people to solve problems'],
-    description: 'Focus on what it takes for the user to complete his or her work. We want people to complete their activities with minimal effort and maximum efficiency.'
+    description: 'Focus on what it takes for the user to complete his or her work. We want people to complete their activities with minimal effort and maximum efficiency.',
   },
   {
     title: 'Audacious',
     mantras: ['Experimentation without fear'],
-    description: 'There will always be risks - just remember that you are always the owner of the result. It\'s better to apologize than to ask for permission.'
-  }
+    description: 'There will always be risks - just remember that you are always the owner of the result. It\'s better to apologize than to ask for permission.',
+  },
 ]
 
-export default function Principles() {
-  const titleStyle = "f1 dib black-70 lh-copy-ns ma0"
+export default function Principles () {
+  const titleStyle = 'f1 dib black-70 lh-copy-ns ma0'
   return (
     <Template>
       <div>
@@ -52,7 +47,7 @@ export default function Principles() {
           </h1>
         </div>
         <section>
-        {
+          {
           principles.map(({title, mantras, description}) => (
             <div className="mb4 mb5-ns">
               <h2 className="f1 ma0 mb3 mb4-ns black-70">{title}</h2>
