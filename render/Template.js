@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Sidebar from './Sidebar'
+import Sidebar from './components/Sidebar'
 import Helmet from "react-helmet";
 import './theme.css'
 
