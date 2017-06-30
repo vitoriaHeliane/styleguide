@@ -1,4 +1,6 @@
 import React from 'react'
+import className from 'classnames'
+
 import Template from '../Template'
 
 const principles = [
@@ -35,12 +37,22 @@ export default function Principles () {
     <Template>
       <div>
         <div className="mb5">
-          <h1 className={`${titleStyle} br-ns bb-0-ns bb b--black-70 bw3-ns bw3 pr4-ns pb3 pb0-ns mr4-ns`}>
+          <h1 className={
+            className(
+              'br-ns bb-0-ns bb b--black-70 bw3-ns bw3 pr4-ns pb3 pb0-ns mr4-ns',
+              titleStyle,
+            )
+          }>
             Design
             <br />
             principles
           </h1>
-          <h1 className={`${titleStyle} mt3 mt0-ns fw2`}>
+          <h1 className={
+            className(
+              'mt3 mt0-ns fw2',
+              titleStyle,
+            )
+          }>
             How we do it
             <br />
             and why
@@ -49,7 +61,10 @@ export default function Principles () {
         <section>
           {
           principles.map(({title, mantras, description}) => (
-            <div className="mb4 mb5-ns">
+            <div
+              className="mb4 mb5-ns"
+              key={title}
+            >
               <h2 className="f1 ma0 mb3 mb4-ns black-70">{title}</h2>
               <div className="mb4">
                 {

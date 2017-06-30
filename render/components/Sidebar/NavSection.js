@@ -1,10 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'vtex.render-runtime/components/Link'
+import className from 'classnames'
+
 import NavList from './NavList'
 
 export default function NavSection ({current, href, name, children}) {
-  const activeClasses = `db pv2 ph3 ph4-l ${href ? 'link hover-bg-light-silver' : ''} lh-copy f5 fw4 ${current ? 'blue' : 'black'}`
+  const activeClasses = className(
+    'db pv2 ph3 ph4-l lh-copy f5 fw4',
+    {
+      'link hover-bg-light-silver': href,
+      'blue': current,
+      'black': !current,
+    }
+  )
 
   return (
     <div>
