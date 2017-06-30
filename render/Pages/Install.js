@@ -1,10 +1,9 @@
 import React from 'react'
 import Template from '../Template'
-import {Heading} from 'onda'
 import CodeEmbed from '../components/CodeEmbed'
 
 export default function GettingStarted () {
-  const textStyle = "f4 lh-copy mw8 black-70"
+  const textStyle = 'f4 lh-copy mw8 black-70'
   return (
     <Template>
       <section className="pr4">
@@ -16,14 +15,14 @@ export default function GettingStarted () {
 
         <p className={textStyle}>Inside your app root import the tachyons:</p>
         <CodeEmbed language="javascript">
-           {'import \'tachyons\' \nimport \'vtex-tachyons\''}
+          {'import \'tachyons\' \nimport \'vtex-tachyons\''}
         </CodeEmbed>
 
         <p className={textStyle}>And now you can import the components and elements directly from the onda package:</p>
         <CodeEmbed language="javascript">
           {'import { Button, Card, Heading, List } from \'onda\''}
         </CodeEmbed>
-       </section>
+      </section>
     </Template>
   )
 }

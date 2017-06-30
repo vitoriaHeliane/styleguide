@@ -1,9 +1,9 @@
-import Component from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { arduinoLight } from 'react-syntax-highlighter/dist/styles'
 
-export default function CodeEmbed({children, language}) {
+export default function CodeEmbed ({children, language}) {
   return (
     <SyntaxHighlighter
       language={language}
@@ -25,4 +25,5 @@ export default function CodeEmbed({children, language}) {
 
 CodeEmbed.propTypes = {
   children: PropTypes.any.isRequired,
+  language: PropTypes.string.isRequired,
 }

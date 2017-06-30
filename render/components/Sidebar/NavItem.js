@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'vtex.render-runtime/components/Link'
 
-export default function NavItem({href, name}) {
+export default function NavItem ({href, name}) {
   return (
     <li>
       <Link

@@ -10,8 +10,8 @@ export default function NavSection ({current, href, name, children}) {
     <div>
       <h4 className="ma0">
         {
-          href ?
-          (
+          href
+          ? (
             <Link
               className={activeClasses}
               to={href}
@@ -40,7 +40,6 @@ export default function NavSection ({current, href, name, children}) {
     </div>
   )
 }
-
 
 NavSection.propTypes = {
   current: PropTypes.bool,

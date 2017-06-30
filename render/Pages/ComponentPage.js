@@ -9,7 +9,7 @@ import Template from '../Template'
 
 export default function ComponentPage ({params: {element, component}}) {
   const preview = element ? previews[element.toLowerCase()] : previews[component.toLowerCase()]
-  const {name, description, Component, exampleCode, props} = preview
+  const {name, description, Component, exampleCode, props: propsList} = preview
   return (
     <Template>
       <div className="black-80">
@@ -56,18 +56,18 @@ export default function ComponentPage ({params: {element, component}}) {
           </Table.Header>
           <Table.Body>
             {
-              props.map(prop => {
+              propsList.map(prop => {
                 const {name, description, required, type, element, values} = prop
                 const propertiesList = [name, type, description, values, element, required].filter(prop => prop)
                 return (
-                  <Table.Row>
+                  <Table.Row key={name}>
                     {
                       propertiesList
                       .map(property => {
                         return (
                           <Table.Cell key={property}>
                             {
-                              typeof(property) === 'boolean'
+                              typeof (property) === 'boolean'
                               ? property ? 'Yes' : 'No'
                               : Array.isArray(property) ? property.join(', ') : property
                             }
