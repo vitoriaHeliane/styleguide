@@ -4,7 +4,7 @@ import Link from 'vtex.render-runtime/components/Link'
 import NavList from './NavList'
 
 export default function NavSection ({current, href, name, children}) {
-  const activeClasses = `db pv2 ph3 ph4-l ${href ? 'link hover-bg-light-silver' : ''} lh-copy ffmark f5 fw4 ${current ? 'blue' : 'black'}`
+  const activeClasses = `db pv2 ph3 ph4-l ${href ? 'link hover-bg-light-silver' : ''} lh-copy f5 fw4 ${current ? 'blue' : 'black'}`
 
   return (
     <div>
