@@ -1,22 +1,22 @@
 {
   "root": {
     "path": "/",
-    "component": "./Pages/Principles.js",
+    "component": "./pages/Principles.js",
     "theme": "./theme.css"
   },
   "element": {
     "path": "/elements/:element",
-    "component": "./Pages/ComponentPage.js",
+    "component": "./pages/ComponentPage.js",
     "theme": "./theme.css"
   },
   "component": {
     "path": "/components/:component",
-    "component": "./Pages/ComponentPage.js",
+    "component": "./pages/ComponentPage.js",
     "theme": "./theme.css"
   },
   "install": {
     "path": "/howto/install",
-    "component": "./Pages/Install.js",
+    "component": "./pages/Install.js",
     "theme": "./theme.css"
   }
 }
