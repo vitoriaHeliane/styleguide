@@ -19,7 +19,7 @@
     "npm:react-syntax-highlighter": "^4.0.1",
     "npm:react-jsx": "^1.0.0",
     "npm:vtex-tachyons": "^0.1.1",
-    "npm:prop-types": "^15.5.10",
+    "npm:prop-types": "^15.5.10"
   },
   "registries": [
     "smartcheckout"

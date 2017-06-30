@@ -1,5 +1,4 @@
 import React from 'react'
-import Icon from 'vtex.icon'
 import PropTypes from 'prop-types'
 
 export default function NavList ({children}) {
