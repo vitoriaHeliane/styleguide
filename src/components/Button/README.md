@@ -59,8 +59,38 @@ Colored container background
 With icon
 
 ```js
-const CloseIcon = require('../icon/Close').default;
-<Button icon primary>
-  <CloseIcon color="#fff" />
-</Button>
+<div className="flex">
+  <div className="flex-none mr5">
+    <div className="mb5">
+      <Button add>Add</Button>
+    </div>
+    <div className="mb5">
+      <Button primary add>Add</Button>
+    </div>
+    <div className="mb5">
+      <Button secondary add>Add</Button>
+    </div>
+    <div className="mb5">
+      <Button disabled add>Add</Button>
+    </div>
+  </div>
+  <div className="flex-none mr5">
+    <div className="mb5">
+      <Button edit>Edit</Button>
+    </div>
+    <div className="mb5">
+      <Button primary edit>Edit</Button>
+    </div>
+    <div className="mb5">
+      <Button secondary edit>Edit</Button>
+    </div>
+    <div className="mb5">
+      <Button disabled edit>Edit</Button>
+    </div>
+  </div>
+  <div className="flex-none mr5">
+  </div>
+  <div className="flex-none">
+  </div>
+</div>
 ```
