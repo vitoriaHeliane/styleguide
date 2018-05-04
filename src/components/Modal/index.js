@@ -10,8 +10,9 @@ class Modal extends PureComponent {
     return (
       <ResponsiveModal
         open={isOpen}
-        little={centered}
+        center={centered}
         onClose={onClose}
+        animationDuration={100}
         classNames={{
           overlay: 'vtex-modal__overlay',
           modal: 'vtex-modal__modal br2',
