@@ -10,7 +10,6 @@ styleguide-visual/*.diff.png
 
 # production
 /build
-/lib
 /styleguide
 
 # misc
