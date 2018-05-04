@@ -1,18 +1,22 @@
 :global :root {
   --c-brand: #F71963;
   --c-brand--light: #F71963;
-  --c-brand--dark: #F71963;
-  --c-base-1: #444;
-  --c-base-2: #E3E4E6;
-  --c-base-3: #727273;
-  --c-emphasis: #444;
-  --c-action-1: #FFF;
-  --c-action-1--disabled: #FFF;
-  --c-action-2: #368df7;
-  --c-action-2--disabled: #368DF7;
-  --c-action-3: #368DF7;
-  --c-action-3--disabled: #368DF7;
-  --c-link: #EDF4FA;
+  --c-brand--dark: #DD1659;
+  --c-base-1: #FFF;
+  --c-base-2: #F7F9FA;
+  --c-base-3: #F2F4F5;
+  --c-base-4: #E3E4E6;
+  --c-base-5: #CACBCC;
+  --c-base-6: #979899;
+  --c-base-7: #727273;
+  --c-base-8: #3F3F40;
+  --c-emphasis: #F71963;
+  --c-primary: #FFF;
+  --c-primary--disabled: #979899;
+  --c-secondary: #368df7;
+  --c-secondary--disabled: #979899;
+  --c-tertiary: #368DF7;
+  --c-tertiary--disabled: #979899;
   --c-success: #8BC34A;
   --c-success--light: #EAFCE3;
   --c-success--dark: #8BC34A;
@@ -25,22 +29,25 @@
   --c-info: #EDF4FA;
   --c-info--light: #EDF4FA;
   --c-info--dark: #EDF4FA;
-  --c-negspace: #fff;
 
   --hover-c-brand: #F71963;
   --hover-c-brand--light: #F71963;
-  --hover-c-brand--dark: #F71963;
-  --hover-c-base-1: #444;
-  --hover-c-base-2: #cacbcc;
-  --hover-c-base-3: #727273;
+  --hover-c-brand--dark: #DD1659;
+  --hover-c-base-1: #FFF;
+  --hover-c-base-2: #F7F9FA;
+  --hover-c-base-3: #F2F4F5;
+  --hover-c-base-4: #E3E4E6;
+  --hover-c-base-5: #CACBCC;
+  --hover-c-base-6: #979899;
+  --hover-c-base-7: #727273;
+  --hover-c-base-8: #3F3F40;
   --hover-c-emphasis: #444;
-  --hover-c-action-1: #FFF;
-  --hover-c-action-1-disabled: #FFF;
-  --hover-c-action-2: #368df7;
-  --hover-c-action-2-disabled: #368df7;
-  --hover-c-action-3: #2A6DBF;
-  --hover-c-action-3-disabled: #2A6DBF;
-  --hover-c-link: #EDF4FA;
+  --hover-c-primary: #FFF;
+  --hover-c-primary--disabled: #979899;
+  --hover-c-secondary: #368df7;
+  --hover-c-secondary--disabled: #979899;
+  --hover-c-tertiary: #2A6DBF;
+  --hover-c-tertiary--disabled: #979899;
   --hover-c-success: #8BC34A;
   --hover-c-success--light: #EAFCE3;
   --hover-c-success--dark: #8BC34A;
@@ -53,20 +60,25 @@
   --hover-c-info: #EDF4FA;
   --hover-c-info--light: #EDF4FA;
   --hover-c-info--dark: #EDF4FA;
-  --hover-c-negspace: #fff;
 
   --bg-brand: #F71963;
-  --bg-base-1: #fff;
-  --bg-base-2: #E3E4E6;
-  --bg-base-3: #444;
+  --bg-brand--light: #F71963;
+  --bg-brand--dark: #DD1659;
+  --bg-base-1: #FFF;
+  --bg-base-2: #F7F9FA;
+  --bg-base-3: #F2F4F5;
+  --bg-base-4: #E3E4E6;
+  --bg-base-5: #CACBCC;
+  --bg-base-6: #979899;
+  --bg-base-7: #727273;
+  --bg-base-8: #3F3F40;
   --bg-emphasis: #444;
-  --bg-action-1: #368DF7;
-  --bg-action-1--disabled: #368DF7;
-  --bg-action-2: #f2f4f5;
-  --bg-action-2--disabled: #f2f4f5;
-  --bg-action-3: transparent;
-  --bg-action-3--disabled: transparent;
-  --bg-link: #EDF4FA;
+  --bg-primary: #368DF7;
+  --bg-primary--disabled: #E3E4E6;
+  --bg-secondary: #f2f4f5;
+  --bg-secondary--disabled: #E3E4E6;
+  --bg-tertiary: transparent;
+  --bg-tertiary--disabled: transparent;
   --bg-success: #8BC34A;
   --bg-success--light: #EAFCE3;
   --bg-success--dark: #8BC34A;
@@ -79,20 +91,25 @@
   --bg-info: #EDF4FA;
   --bg-info--light: #EDF4FA;
   --bg-info--dark: #EDF4FA;
-  --bg-negspace: #fff;
 
   --hover-bg-brand: #F71963;
-  --hover-bg-base-1: #444;
-  --hover-bg-base-2: #cacbcc;
-  --hover-bg-base-3: #444;
+  --hover-bg-brand--light: #F71963;
+  --hover-bg-brand--dark: #DD1659;
+  --hover-bg-base-1: #FFF;
+  --hover-bg-base-2: #F7F9FA;
+  --hover-bg-base-3: #F2F4F5;
+  --hover-bg-base-4: #E3E4E6;
+  --hover-bg-base-5: #CACBCC;
+  --hover-bg-base-6: #979899;
+  --hover-bg-base-7: #727273;
+  --hover-bg-base-8: #3F3F40;
   --hover-bg-emphasis: #444;
-  --hover-bg-action-1: #2A6DBF;
-  --hover-bg-action-1--disabled: #2A6DBF;
-  --hover-bg-action-2: #e3e4e6;
-  --hover-bg-action-2--disabled: #e3e4e6;
-  --hover-bg-action-3: transparent;
-  --hover-bg-action-3--disabled: transparent;
-  --hover-bg-link: #EDF4FA;
+  --hover-bg-primary: #2A6DBF;
+  --hover-bg-primary--disabled: #E3E4E6;
+  --hover-bg-secondary: #e3e4e6;
+  --hover-bg-secondary--disabled: #E3E4E6;
+  --hover-bg-tertiary: transparent;
+  --hover-bg-tertiary--disabled: transparent;
   --hover-bg-success: #8BC34A;
   --hover-bg-success--light: #EAFCE3;
   --hover-bg-success--dark: #8BC34A;
@@ -105,20 +122,25 @@
   --hover-bg-info: #EDF4FA;
   --hover-bg-info--light: #EDF4FA;
   --hover-bg-info--dark: #EDF4FA;
-  --hover-bg-negspace: #fff;
 
   --b--brand: #F71963;
-  --b--base-1: #444;
-  --b--base-2: #E3E4E6;
-  --b--base-3: #444;
+  --b--brand--light: #F71963;
+  --b--brand--dark: #DD1659;
+  --b--base-1: #FFF;
+  --b--base-2: #F7F9FA;
+  --b--base-3: #F2F4F5;
+  --b--base-4: #E3E4E6;
+  --b--base-5: #CACBCC;
+  --b--base-6: #979899;
+  --b--base-7: #727273;
+  --b--base-8: #3F3F40;
   --b--emphasis: #444;
-  --b--action-1: #368DF7;
-  --b--action-1--disabled: #368DF7;
-  --b--action-2: #f2f4f5;
-  --b--action-2--disabled: #f2f4f5;
-  --b--action-3: transparent;
-  --b--action-3--disabled: transparent;
-  --b--link: #EDF4FA;
+  --b--primary: #368DF7;
+  --b--primary--disabled: #E3E4E6;
+  --b--secondary: #f2f4f5;
+  --b--secondary--disabled: #E3E4E6;
+  --b--tertiary: transparent;
+  --b--tertiary--disabled: transparent;
   --b--success: #8BC34A;
   --b--success--light: #EAFCE3;
   --b--success--dark: #8BC34A;
@@ -131,20 +153,25 @@
   --b--info: #EDF4FA;
   --b--info--light: #EDF4FA;
   --b--info--dark: #EDF4FA;
-  --b--negspace: #fff;
 
   --hover-b--brand: #F71963;
-  --hover-b--base-1: #444;
-  --hover-b--base-2: #cacbcc;
-  --hover-b--base-3: #444;
+  --hover-b--brand--light: #F71963;
+  --hover-b--brand--dark: #DD1659;
+  --hover-b--base-1: #FFF;
+  --hover-b--base-2: #F7F9FA;
+  --hover-b--base-3: #F2F4F5;
+  --hover-b--base-4: #E3E4E6;
+  --hover-b--base-5: #CACBCC;
+  --hover-b--base-6: #979899;
+  --hover-b--base-7: #727273;
+  --hover-b--base-8: #3F3F40;
   --hover-b--emphasis: #444;
-  --hover-b--action-1: #2A6DBF;
-  --hover-b--action-1--disabled: #2A6DBF;
-  --hover-b--action-2: #e3e4e6;
-  --hover-b--action-2--disabled: #e3e4e6;
-  --hover-b--action-3: transparent;
-  --hover-b--action-3--disabled: transparent;
-  --hover-b--link: #EDF4FA;
+  --hover-b--primary: #2A6DBF;
+  --hover-b--primary--disabled: #E3E4E6;
+  --hover-b--secondary: #e3e4e6;
+  --hover-b--secondary--disabled: #E3E4E6;
+  --hover-b--tertiary: transparent;
+  --hover-b--tertiary--disabled: transparent;
   --hover-b--success: #8BC34A;
   --hover-b--success--light: #EAFCE3;
   --hover-b--success--dark: #8BC34A;
@@ -157,25 +184,26 @@
   --hover-b--info: #EDF4FA;
   --hover-b--info--light: #EDF4FA;
   --hover-b--info--dark: #EDF4FA;
-  --hover-b--negspace: #fff;
 }
 
 :global .c-brand { color: var(--c-brand); }
 :global .c-brand--light { color: var(--c-brand--light); }
 :global .c-brand--dark { color: var(--c-brand--dark); }
 :global .c-base-1 { color: var(--c-base-1); }
-:global .c-base-1 { color: var(--c-base-1); }
-:global .c-base-2 { color: var(--c-base-2); }
 :global .c-base-2 { color: var(--c-base-2); }
 :global .c-base-3 { color: var(--c-base-3); }
+:global .c-base-4 { color: var(--c-base-4); }
+:global .c-base-5 { color: var(--c-base-5); }
+:global .c-base-6 { color: var(--c-base-6); }
+:global .c-base-7 { color: var(--c-base-7); }
+:global .c-base-8 { color: var(--c-base-8); }
 :global .c-emphasis { color: var(--c-emphasis); }
-:global .c-action-1 { color: var(--c-action-1); }
-:global .c-action-1--disabled { color: var(--c-action-1--disabled); }
-:global .c-action-2 { color: var(--c-action-2); }
-:global .c-action-2--disabled { color: var(--c-action-2--disabled); }
-:global .c-action-3 { color: var(--c-action-3); }
-:global .c-action-3--disabled { color: var(--c-action-3--disabled); }
-:global .c-link { color: var(--c-link); }
+:global .c-primary { color: var(--c-primary); }
+:global .c-primary--disabled { color: var(--c-primary--disabled); }
+:global .c-secondary { color: var(--c-secondary); }
+:global .c-secondary--disabled { color: var(--c-secondary--disabled); }
+:global .c-tertiary { color: var(--c-tertiary); }
+:global .c-tertiary--disabled { color: var(--c-tertiary--disabled); }
 :global .c-success { color: var(--c-success); }
 :global .c-success--light { color: var(--c-success--light); }
 :global .c-success--dark { color: var(--c-success--dark); }
@@ -188,24 +216,25 @@
 :global .c-info { color: var(--c-info); }
 :global .c-info--light { color: var(--c-info--light); }
 :global .c-info--dark { color: var(--c-info--dark); }
-:global .c-negspace { color: var(--c-negspace); }
 
 :global .hover-c-brand:hover { color: var(--hover-c-brand); }
 :global .hover-c-brand--light:hover { color: var(--hover-c-brand--light); }
 :global .hover-c-brand--dark:hover { color: var(--hover-c-brand--dark); }
 :global .hover-c-base-1:hover { color: var(--hover-c-base-1); }
-:global .hover-c-base-1:hover { color: var(--hover-c-base-1); }
-:global .hover-c-base-2:hover { color: var(--hover-c-base-2); }
 :global .hover-c-base-2:hover { color: var(--hover-c-base-2); }
 :global .hover-c-base-3:hover { color: var(--hover-c-base-3); }
+:global .hover-c-base-4:hover { color: var(--hover-c-base-4); }
+:global .hover-c-base-5:hover { color: var(--hover-c-base-5); }
+:global .hover-c-base-6:hover { color: var(--hover-c-base-6); }
+:global .hover-c-base-7:hover { color: var(--hover-c-base-7); }
+:global .hover-c-base-8:hover { color: var(--hover-c-base-8); }
 :global .hover-c-emphasis:hover { color: var(--hover-c-emphasis); }
-:global .hover-c-action-1:hover { color: var(--hover-c-action-1); }
-:global .hover-c-action-1--disabled:hover { color: var(--hover-c-action-1); }
-:global .hover-c-action-2:hover { color: var(--hover-c-action-2); }
-:global .hover-c-action-2--disabled:hover { color: var(--hover-c-action-2--disabled); }
-:global .hover-c-action-3:hover { color: var(--hover-c-action-3); }
-:global .hover-c-action-3--disabled:hover { color: var(--hover-c-action-3--disabled); }
-:global .hover-c-link:hover { color: var(--hover-c-link); }
+:global .hover-c-primary:hover { color: var(--hover-c-primary); }
+:global .hover-c-primary--disabled:hover { color: var(--hover-c-primary--disabled); }
+:global .hover-c-secondary:hover { color: var(--hover-c-secondary); }
+:global .hover-c-secondary--disabled:hover { color: var(--hover-c-secondary--disabled); }
+:global .hover-c-tertiary:hover { color: var(--hover-c-tertiary); }
+:global .hover-c-tertiary--disabled:hover { color: var(--hover-c-tertiary--disabled); }
 :global .hover-c-success:hover { color: var(--hover-c-success); }
 :global .hover-c-success--light:hover { color: var(--hover-c-success--light); }
 :global .hover-c-success--dark:hover { color: var(--hover-c-success--dark); }
@@ -218,24 +247,25 @@
 :global .hover-c-info:hover { color: var(--hover-c-info); }
 :global .hover-c-info--light:hover { color: var(--hover-c-info--light); }
 :global .hover-c-info--dark:hover { color: var(--hover-c-info--dark); }
-:global .hover-c-negspace:hover { color: var(--hover-c-negspace); }
 
 :global .bg-brand { background-color: var(--bg-brand); }
 :global .bg-brand--light { background-color: var(--bg-brand--light); }
 :global .bg-brand--dark { background-color: var(--bg-brand--dark); }
 :global .bg-base-1 { background-color: var(--bg-base-1); }
-:global .bg-base-1 { background-color: var(--bg-base-1); }
-:global .bg-base-2 { background-color: var(--bg-base-2); }
 :global .bg-base-2 { background-color: var(--bg-base-2); }
 :global .bg-base-3 { background-color: var(--bg-base-3); }
+:global .bg-base-4 { background-color: var(--bg-base-4); }
+:global .bg-base-5 { background-color: var(--bg-base-5); }
+:global .bg-base-6 { background-color: var(--bg-base-6); }
+:global .bg-base-7 { background-color: var(--bg-base-7); }
+:global .bg-base-8 { background-color: var(--bg-base-8); }
 :global .bg-emphasis { background-color: var(--bg-emphasis); }
-:global .bg-action-1 { background-color: var(--bg-action-1); }
-:global .bg-action-1--disabled { background-color: var(--bg-action-1); }
-:global .bg-action-2 { background-color: var(--bg-action-2); }
-:global .bg-action-2--disabled { background-color: var(--bg-action-2--disabled); }
-:global .bg-action-3 { background-color: var(--bg-action-3); }
-:global .bg-action-3--disabled { background-color: var(--bg-action-3--disabled); }
-:global .bg-link { background-color: var(--bg-link); }
+:global .bg-primary { background-color: var(--bg-primary); }
+:global .bg-primary--disabled { background-color: var(--bg-primary--disabled); }
+:global .bg-secondary { background-color: var(--bg-secondary); }
+:global .bg-secondary--disabled { background-color: var(--bg-secondary--disabled); }
+:global .bg-tertiary { background-color: var(--bg-tertiary); }
+:global .bg-tertiary--disabled { background-color: var(--bg-tertiary--disabled); }
 :global .bg-success { background-color: var(--bg-success); }
 :global .bg-success--light { background-color: var(--bg-success--light); }
 :global .bg-success--dark { background-color: var(--bg-success--dark); }
@@ -248,24 +278,25 @@
 :global .bg-info { background-color: var(--bg-info); }
 :global .bg-info--light { background-color: var(--bg-info--light); }
 :global .bg-info--dark { background-color: var(--bg-info--dark); }
-:global .bg-negspace { background-color: var(--bg-negspace); }
 
 :global .hover-bg-brand:hover { background-color: var(--hover-bg-brand); }
 :global .hover-bg-brand--light:hover { background-color: var(--hover-bg-brand--light); }
 :global .hover-bg-brand--dark:hover { background-color: var(--hover-bg-brand--dark); }
 :global .hover-bg-base-1:hover { background-color: var(--hover-bg-base-1); }
-:global .hover-bg-base-1:hover { background-color: var(--hover-bg-base-1); }
-:global .hover-bg-base-2:hover { background-color: var(--hover-bg-base-2); }
 :global .hover-bg-base-2:hover { background-color: var(--hover-bg-base-2); }
 :global .hover-bg-base-3:hover { background-color: var(--hover-bg-base-3); }
+:global .hover-bg-base-4:hover { background-color: var(--hover-bg-base-4); }
+:global .hover-bg-base-5:hover { background-color: var(--hover-bg-base-5); }
+:global .hover-bg-base-6:hover { background-color: var(--hover-bg-base-6); }
+:global .hover-bg-base-7:hover { background-color: var(--hover-bg-base-7); }
+:global .hover-bg-base-8:hover { background-color: var(--hover-bg-base-8); }
 :global .hover-bg-emphasis:hover { background-color: var(--hover-bg-emphasis); }
-:global .hover-bg-action-1:hover { background-color: var(--hover-bg-action-1); }
-:global .hover-bg-action-1--disabled:hover { background-color: var(--hover-bg-action-1--disabled); }
-:global .hover-bg-action-2:hover { background-color: var(--hover-bg-action-2); }
-:global .hover-bg-action-2--disabled:hover { background-color: var(--hover-bg-action-2--disabled); }
-:global .hover-bg-action-3:hover { background-color: var(--hover-bg-action-3); }
-:global .hover-bg-action-3--disabled:hover { background-color: var(--hover-bg-action-3--disabled); }
-:global .hover-bg-link:hover { background-color: var(--hover-bg-link); }
+:global .hover-bg-primary:hover { background-color: var(--hover-bg-primary); }
+:global .hover-bg-primary--disabled:hover { background-color: var(--hover-bg-primary--disabled); }
+:global .hover-bg-secondary:hover { background-color: var(--hover-bg-secondary); }
+:global .hover-bg-secondary--disabled:hover { background-color: var(--hover-bg-secondary--disabled); }
+:global .hover-bg-tertiary:hover { background-color: var(--hover-bg-tertiary); }
+:global .hover-bg-tertiary--disabled:hover { background-color: var(--hover-bg-tertiary--disabled); }
 :global .hover-bg-success:hover { background-color: var(--hover-bg-success); }
 :global .hover-bg-success--light:hover { background-color: var(--hover-bg-success--light); }
 :global .hover-bg-success--dark:hover { background-color: var(--hover-bg-success--dark); }
@@ -278,24 +309,25 @@
 :global .hover-bg-info:hover { background-color: var(--hover-bg-info); }
 :global .hover-bg-info--light:hover { background-color: var(--hover-bg-info--light); }
 :global .hover-bg-info--dark:hover { background-color: var(--hover-bg-info--dark); }
-:global .hover-bg-negspace:hover { background-color: var(--hover-bg-negspace); }
 
 :global .b--brand { border-color: var(--b--brand); }
 :global .b--brand--light { border-color: var(--b--brand--light); }
 :global .b--brand--dark { border-color: var(--b--brand--dark); }
 :global .b--base-1 { border-color: var(--b--base-1); }
-:global .b--base-1 { border-color: var(--b--base-1); }
-:global .b--base-2 { border-color: var(--b--base-2); }
 :global .b--base-2 { border-color: var(--b--base-2); }
 :global .b--base-3 { border-color: var(--b--base-3); }
+:global .b--base-4 { border-color: var(--b--base-4); }
+:global .b--base-5 { border-color: var(--b--base-5); }
+:global .b--base-6 { border-color: var(--b--base-6); }
+:global .b--base-7 { border-color: var(--b--base-7); }
+:global .b--base-8 { border-color: var(--b--base-8); }
 :global .b--emphasis { border-color: var(--b--emphasis); }
-:global .b--action-1 { border-color: var(--b--action-1); }
-:global .b--action-1--disabled { border-color: var(--b--action-1--disabled); }
-:global .b--action-2 { border-color: var(--b--action-2); }
-:global .b--action-2--disabled { border-color: var(--b--action-2--disabled); }
-:global .b--action-3 { border-color: var(--b--action-3); }
-:global .b--action-3--disabled { border-color: var(--b--action-3--disabled); }
-:global .b--link { border-color: var(--b--link); }
+:global .b--primary { border-color: var(--b--primary); }
+:global .b--primary--disabled { border-color: var(--b--primary--disabled); }
+:global .b--secondary { border-color: var(--b--secondary); }
+:global .b--secondary--disabled { border-color: var(--b--secondary--disabled); }
+:global .b--tertiary { border-color: var(--b--tertiary); }
+:global .b--tertiary--disabled { border-color: var(--b--tertiary--disabled); }
 :global .b--success { border-color: var(--b--success); }
 :global .b--success--light { border-color: var(--b--success--light); }
 :global .b--success { border-color: var(--b--success); }
@@ -308,24 +340,25 @@
 :global .b--info { border-color: var(--b--info); }
 :global .b--info--light { border-color: var(--b--info--light); }
 :global .b--info--dark { border-color: var(--b--info--dark); }
-:global .b--negspace { border-color: var(--b--negspace); }
 
 :global .hover-b--brand:hover { border-color: var(--hover-b--brand); }
 :global .hover-b--brand--light:hover { border-color: var(--hover-b--brand--light); }
 :global .hover-b--brand--dark:hover { border-color: var(--hover-b--brand--dark); }
 :global .hover-b--base-1:hover { border-color: var(--hover-b--base-1); }
-:global .hover-b--base-1:hover { border-color: var(--hover-b--base-1); }
-:global .hover-b--base-2:hover { border-color: var(--hover-b--base-2); }
 :global .hover-b--base-2:hover { border-color: var(--hover-b--base-2); }
 :global .hover-b--base-3:hover { border-color: var(--hover-b--base-3); }
+:global .hover-b--base-4:hover { border-color: var(--hover-b--base-4); }
+:global .hover-b--base-5:hover { border-color: var(--hover-b--base-5); }
+:global .hover-b--base-6:hover { border-color: var(--hover-b--base-6); }
+:global .hover-b--base-7:hover { border-color: var(--hover-b--base-7); }
+:global .hover-b--base-8:hover { border-color: var(--hover-b--base-8); }
 :global .hover-b--emphasis:hover { border-color: var(--hover-b--emphasis); }
-:global .hover-b--action-1:hover { border-color: var(--hover-b--action-1); }
-:global .hover-b--action-1--disabled:hover { border-color: var(--hover-b--action-1--disabled); }
-:global .hover-b--action-2:hover { border-color: var(--hover-b--action-2); }
-:global .hover-b--action-2--disabled:hover { border-color: var(--hover-b--action-2--disabled); }
-:global .hover-b--action-3:hover { border-color: var(--hover-b--action-3); }
-:global .hover-b--action-3--disabled:hover { border-color: var(--hover-b--action-3--disabled); }
-:global .hover-b--link:hover { border-color: var(--hover-b--link); }
+:global .hover-b--primary:hover { border-color: var(--hover-b--primary); }
+:global .hover-b--primary--disabled:hover { border-color: var(--hover-b--primary--disabled); }
+:global .hover-b--secondary:hover { border-color: var(--hover-b--secondary); }
+:global .hover-b--secondary--disabled:hover { border-color: var(--hover-b--secondary--disabled); }
+:global .hover-b--tertiary:hover { border-color: var(--hover-b--tertiary); }
+:global .hover-b--tertiary--disabled:hover { border-color: var(--hover-b--tertiary--disabled); }
 :global .hover-b--success:hover { border-color: var(--hover-b--success); }
 :global .hover-b--success--light:hover { border-color: var(--hover-b--success--light); }
 :global .hover-b--success--dark:hover { border-color: var(--hover-b--success--dark); }
@@ -338,4 +371,3 @@
 :global .hover-b--info:hover { border-color: var(--hover-b--info); }
 :global .hover-b--info--light:hover { border-color: var(--hover-b--info--light); }
 :global .hover-b--info--dark:hover { border-color: var(--hover-b--info--dark); }
-:global .hover-b--negspace:hover { border-color: var(--hover-b--negspace); }

@@ -48,30 +48,25 @@ class Input extends Component {
     const widthClass = 'w-100'
     const box = 'ma0 border-box'
     const border = 'bw1 br2 b--solid outline-0'
-    const typography = 'c-base-1'
-    let classes = `${widthClass} ${box} ${border} ${typography} `
+    let classes = `${widthClass} ${box} ${border} `
 
     if (token) {
       classes += 'code '
     }
 
-    if (active) {
-      classes += 'b--gray '
+    if (this.props.disabled) {
+      classes += 'bg-base-3 b--base-3 c-base-5 '
     } else {
-      classes += 'b--light-gray '
-      if (!this.props.disabled) {
-        classes += 'hover-b--silver '
+      classes += 'hover-b--base-5 bg-base-1 c-base-8 '
+      if (active) {
+        classes += 'b--base-6 '
+      } else {
+        classes += 'b--base-4 '
       }
     }
 
     if (error || errorMessage) {
       classes += 'b--danger hover-b--danger '
-    }
-
-    if (this.props.disabled) {
-      classes += 'bg-light-gray bg-light-silver b--light-silver silver '
-    } else {
-      classes += 'bg-base-1 '
     }
 
     switch (size) {
@@ -130,7 +125,7 @@ class Input extends Component {
         />
         {errorMessage &&
           <div className="c-danger f6 mt3 lh-title">{errorMessage}</div>}
-        {helpText && <div className="c-base-3 f6 mt3 lh-title">{helpText}</div>}
+        {helpText && <div className="c-base-7 f6 mt3 lh-title">{helpText}</div>}
       </label>
     )
   }

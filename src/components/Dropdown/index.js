@@ -48,10 +48,6 @@ class Dropdown extends Component {
     const valueLabel = this.getValueLabel()
     const showCaption = !valueLabel
 
-    classes += disabled ? 'bg-light-gray ' : 'pointer '
-    selectClasses += disabled ? '' : 'pointer '
-    classes += !disabled && valueLabel ? 'c-base-1 ' : 'gray '
-
     switch (size) {
       case 'large':
         classes += 'f5 pv4 pl6 pr5 '
@@ -73,19 +69,18 @@ class Dropdown extends Component {
     const containerStyle = { width }
 
     if (disabled) {
-      containerClasses += 'bg-light-gray '
+      containerClasses += 'bg-base-4 '
+      classes += 'bg-base-3 c-base-3 '
     } else {
-      containerClasses += 'bg-base-1 '
+      classes += 'c-base-8 '
+      selectClasses += 'pointer '
+      containerClasses += 'bg-base-1 b--base-4 hover-b--base-5 c-base-8 '
     }
 
     if (error || errorMessage) {
       containerClasses += 'ba b--danger hover-b--danger '
     } else {
       containerClasses += 'ba b--base-2 '
-    }
-
-    if (!disabled) {
-      containerClasses += 'hover-b--base-2 '
     }
 
     return (
@@ -146,7 +141,7 @@ class Dropdown extends Component {
           <div className="c-danger f6 mt3 lh-title">{errorMessage}</div>
         )}
         {helpText && (
-          <div className="c-base-3 f6 mt3 lh-title">{helpText}</div>
+          <div className="c-base-7 f6 mt3 lh-title">{helpText}</div>
         )}
       </div>
     )

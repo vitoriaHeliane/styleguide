@@ -41,24 +41,23 @@ class Button extends Component {
     }
 
     if (!secondary && !primary && !disabled) {
-      classes += 'c-action-3 hover-c-action-3 bg-action-3 hover-bg-action-3 b--action-3 hover-b--action-3 hover-bg-action-3 '
+      classes += 'c-tertiary hover-c-tertiary bg-tertiary hover-bg-tertiary b--tertiary hover-b--tertiary hover-bg-tertiary '
     }
 
     if (secondary && !disabled) {
-      classes += 'c-action-2 hover-c-action-2 bg-action-2 hover-bg-action-2 b--action-2 '
-    }
-    if (secondary) {
-      classes += 'hover-b--action-2 hover-bg-action-2 '
+      classes += 'c-secondary hover-c-secondary bg-secondary hover-bg-secondary b--secondary hover-b--secondary hover-bg-secondary '
     }
 
     if (primary && !disabled) {
-      classes += 'c-action-1 hover-c-action-1 bg-action-1 hover-bg-action-1 b--action-1 hover-b--action-1 '
+      classes += 'c-primary hover-c-primary bg-primary hover-bg-primary b--primary hover-b--primary '
+    }
+
+    if (!disabled) {
+      classes += 'pointer '
     }
 
     if (disabled) {
-      classes += 'b--light-gray bg-light-gray gray '
-    } else {
-      classes += 'pointer '
+      classes += 'c-primary--disabled hover-c-primary--disabled bg-primary--disabled hover-bg-primary--disabled b--primary--disabled hover-b--primary--disabled  '
     }
 
     if (block) {

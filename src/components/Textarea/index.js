@@ -43,27 +43,23 @@ class Textarea extends Component {
     const widthClass = 'w-100'
     const box = 'ma0 border-box'
     const border = 'bw1 br2 b--solid outline-0'
-    const typography = 'c-base-1 f6'
+    const typography = 'f6 '
     const padding = 'pv3 ph5'
     let classes = `${widthClass} ${box} ${padding} ${border} ${typography} `
 
-    if (active) {
-      classes += 'b--base-2 '
+    if (this.props.disabled) {
+      classes += 'bg-base-3 b--base-3 c-base-5 '
     } else {
-      classes += 'b--base-2 '
-      if (!this.props.disabled) {
-        classes += 'hover-b--silver '
+      classes += 'hover-b--base-5 bg-base-1 c-base-8 '
+      if (active) {
+        classes += 'b--base-6 hover-b--base-2 '
+      } else {
+        classes += 'b--base-4 hover-b--base-3 '
       }
     }
 
     if (error || errorMessage) {
       classes += 'b--danger hover-b--danger '
-    }
-
-    if (this.props.disabled) {
-      classes += 'bg-light-gray bg-light-silver b--light-silver silver '
-    } else {
-      classes += 'bg-base-1 '
     }
 
     return (
@@ -95,7 +91,7 @@ class Textarea extends Component {
         {errorMessage && (
           <div className="red f6 mt3 lh-title">{errorMessage}</div>
         )}
-        {helpText && <div className="mid-gray f6 mt3 lh-title">{helpText}</div>}
+        {helpText && <div className="c-base-7 f6 mt3 lh-title">{helpText}</div>}
       </label>
     )
   }

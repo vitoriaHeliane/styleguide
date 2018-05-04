@@ -8,37 +8,37 @@ const Success = require('./Success').default;
 const Warning = require('./Warning').default;
 <div className="flex justify-between tl">
     <div>
-        <div className="pb3 ttu gray">Close</div>
+        <div className="pb3 ttu c-base-5">Close</div>
         <Close width={40} />
     </div>
 
     <div>
-        <div className="pb3 ttu gray">Edit</div>
+        <div className="pb3 ttu c-base-5">Edit</div>
         <Edit width={40} />
     </div>
 
     <div>
-        <div className="pb3 ttu gray">Check</div>
+        <div className="pb3 ttu c-base-5">Check</div>
         <Check width={40} />
     </div>
 
     <div>
-        <div className="pb3 ttu gray">Deny</div>
+        <div className="pb3 ttu c-base-5">Deny</div>
         <Deny width={40} />
     </div>
 
     <div>
-        <div className="pb3 ttu gray">Failure</div>
+        <div className="pb3 ttu c-base-5">Failure</div>
         <Failure width={40} />
     </div>
 
     <div>
-        <div className="pb3 ttu gray">Success</div>
+        <div className="pb3 ttu c-base-5">Success</div>
         <Success width={40} />
     </div>
 
     <div>
-        <div className="pb3 ttu gray">Warning</div>
+        <div className="pb3 ttu c-base-5">Warning</div>
         <Warning width={40} />
     </div>
 </div>

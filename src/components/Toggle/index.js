@@ -15,7 +15,6 @@ class Toggle extends Component {
     let iconDenyClasses = 'absolute mh2 dn c-danger '
     let iconCheckClasses = 'absolute mh3 dn c-success '
 
-    // Background
     if (semantic) {
       if (!disabled && !checked) {
         classes += 'bg-danger '
@@ -28,19 +27,18 @@ class Toggle extends Component {
         iconDenyClasses += 'flex o-0 '
         iconCheckClasses += 'flex o-100 '
       }
-    } else if (disabled) {
-      classes += 'bg-near-white '
     } else {
-      if (!checked) {
-        classes += 'bg-action-2 '
-      }
-
-      if (checked) {
-        classes += 'bg-action-1 '
+      if (disabled) {
+        classes += 'bg-base-2 '
+      } else {
+        if (checked) {
+          classes += 'bg-primary '
+        } else {
+          classes += 'bg-base-6 '
+        }
       }
     }
 
-    // Circle
     if (checked) {
       circleClasses += 'left-2 '
       iconDenyClasses += 'left-2 '
@@ -52,7 +50,7 @@ class Toggle extends Component {
     }
 
     if (disabled) {
-      circleClasses += 'bg-light-gray '
+      circleClasses += 'bg-base-4 '
     } else {
       circleClasses += 'bg-base-1 '
     }
