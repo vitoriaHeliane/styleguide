@@ -27,7 +27,58 @@ class ModalExample extends React.Component {
           isOpen={this.state.isModalOpen}
           onClose={this.handleCloseModal}
         >
-          <p>
+          <p className="ma0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </Modal>
+      </div>
+    )
+  }
+}
+
+;<ModalExample />
+```
+
+With buttons and title
+
+```js
+class ModalExample extends React.Component {
+  constructor() {
+    super()
+    this.state = { isModalOpen: false }
+    this.handleOpenModal = this.handleOpenModal.bind(this)
+    this.handleCloseModal = this.handleCloseModal.bind(this)
+  }
+
+  handleOpenModal() {
+    this.setState({ isModalOpen: true })
+  }
+
+  handleCloseModal() {
+    this.setState({ isModalOpen: false })
+  }
+
+  render() {
+    return (
+      <div>
+        <Button onClick={this.handleOpenModal}>Open modal</Button>
+
+        <Modal
+          centered
+          isOpen={this.state.isModalOpen}
+          onClose={this.handleCloseModal}
+          title='Title of the modal'
+          cancelButton='Cancel'
+          onCancel={this.handleCloseModal}
+          confirmButton='Confirm'
+        >
+          <p className="ma0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -137,6 +188,62 @@ class ModalExample extends React.Component {
             Aliquam lobortis mauris quis mi vestibulum dignissim. Nam et felis
             in arcu condimentum consequat. Phasellus lectus nibh, suscipit et
             risus quis, eleifend lacinia ligula.
+          </p>
+        </Modal>
+      </div>
+    )
+  }
+}
+
+;<ModalExample />
+```
+
+Custom buttons
+
+```js
+class ModalExample extends React.Component {
+  constructor() {
+    super()
+    this.state = { isModalOpen: false }
+    this.handleOpenModal = this.handleOpenModal.bind(this)
+    this.handleCloseModal = this.handleCloseModal.bind(this)
+  }
+
+  handleOpenModal() {
+    this.setState({ isModalOpen: true })
+  }
+
+  handleCloseModal() {
+    this.setState({ isModalOpen: false })
+  }
+
+  render() {
+    return (
+      <div>
+        <Button onClick={this.handleOpenModal}>Open modal</Button>
+
+        <Modal
+          centered
+          isOpen={this.state.isModalOpen}
+          onClose={this.handleCloseModal}
+          title='Title of the modal'
+          customButtons={(
+            <React.Fragment>
+              <span className="mr4"><Button>Button 1</Button></span>
+              <span className="mr4"><Button disabled>Button 2</Button></span>
+              <span className="mr4"><Button secondary>Button 3</Button></span>
+              <Button primary>Button 4</Button>
+            </React.Fragment>
+          )}
+        >
+          <p className="ma0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </Modal>
       </div>
