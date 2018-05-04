@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import ResponsiveModal from 'react-responsive-modal'
+import Button from '../Button'
 
 class Modal extends PureComponent {
   render() {
