@@ -48,7 +48,7 @@ class Input extends Component {
     const widthClass = 'w-100'
     const box = 'ma0 border-box'
     const border = 'bw1 br2 b--solid outline-0'
-    const typography = 'near-black'
+    const typography = 'c-base-1'
     let classes = `${widthClass} ${box} ${border} ${typography} `
 
     if (token) {
@@ -65,13 +65,13 @@ class Input extends Component {
     }
 
     if (error || errorMessage) {
-      classes += 'b--red hover-b--red '
+      classes += 'b--danger hover-b--danger '
     }
 
     if (this.props.disabled) {
       classes += 'bg-light-gray bg-light-silver b--light-silver silver '
     } else {
-      classes += 'bg-white '
+      classes += 'bg-base-1 '
     }
 
     switch (size) {
@@ -129,8 +129,8 @@ class Input extends Component {
           id={this.props.id}
         />
         {errorMessage &&
-          <div className="red f6 mt3 lh-title">{errorMessage}</div>}
-        {helpText && <div className="mid-gray f6 mt3 lh-title">{helpText}</div>}
+          <div className="c-danger f6 mt3 lh-title">{errorMessage}</div>}
+        {helpText && <div className="c-base-3 f6 mt3 lh-title">{helpText}</div>}
       </label>
     )
   }

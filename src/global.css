@@ -1,0 +1,341 @@
+:global :root {
+  --c-brand: #F71963;
+  --c-brand--light: #F71963;
+  --c-brand--dark: #F71963;
+  --c-base-1: #444;
+  --c-base-2: #E3E4E6;
+  --c-base-3: #727273;
+  --c-emphasis: #444;
+  --c-action-1: #FFF;
+  --c-action-1--disabled: #FFF;
+  --c-action-2: #368df7;
+  --c-action-2--disabled: #368DF7;
+  --c-action-3: #368DF7;
+  --c-action-3--disabled: #368DF7;
+  --c-link: #EDF4FA;
+  --c-success: #8BC34A;
+  --c-success--light: #EAFCE3;
+  --c-success--dark: #8BC34A;
+  --c-danger: #FF4C4C;
+  --c-danger--light: #FFE6E6;
+  --c-danger--dark: #FF4C4C;
+  --c-warning: #FFB100;
+  --c-warning--light: #FFF6E0;
+  --c-warning--dark: #FFB100;
+  --c-info: #EDF4FA;
+  --c-info--light: #EDF4FA;
+  --c-info--dark: #EDF4FA;
+  --c-negspace: #fff;
+
+  --hover-c-brand: #F71963;
+  --hover-c-brand--light: #F71963;
+  --hover-c-brand--dark: #F71963;
+  --hover-c-base-1: #444;
+  --hover-c-base-2: #cacbcc;
+  --hover-c-base-3: #727273;
+  --hover-c-emphasis: #444;
+  --hover-c-action-1: #FFF;
+  --hover-c-action-1-disabled: #FFF;
+  --hover-c-action-2: #368df7;
+  --hover-c-action-2-disabled: #368df7;
+  --hover-c-action-3: #2A6DBF;
+  --hover-c-action-3-disabled: #2A6DBF;
+  --hover-c-link: #EDF4FA;
+  --hover-c-success: #8BC34A;
+  --hover-c-success--light: #EAFCE3;
+  --hover-c-success--dark: #8BC34A;
+  --hover-c-danger: #FF4C4C;
+  --hover-c-danger--light: #FFE6E6;
+  --hover-c-danger--dark: #FF4C4C;
+  --hover-c-warning: #FFB100;
+  --hover-c-warning--light: #FFF6E0;
+  --hover-c-warning--dark: #FFB100;
+  --hover-c-info: #EDF4FA;
+  --hover-c-info--light: #EDF4FA;
+  --hover-c-info--dark: #EDF4FA;
+  --hover-c-negspace: #fff;
+
+  --bg-brand: #F71963;
+  --bg-base-1: #fff;
+  --bg-base-2: #E3E4E6;
+  --bg-base-3: #444;
+  --bg-emphasis: #444;
+  --bg-action-1: #368DF7;
+  --bg-action-1--disabled: #368DF7;
+  --bg-action-2: #f2f4f5;
+  --bg-action-2--disabled: #f2f4f5;
+  --bg-action-3: transparent;
+  --bg-action-3--disabled: transparent;
+  --bg-link: #EDF4FA;
+  --bg-success: #8BC34A;
+  --bg-success--light: #EAFCE3;
+  --bg-success--dark: #8BC34A;
+  --bg-danger: #FF4C4C;
+  --bg-danger--light: #FFE6E6;
+  --bg-danger--dark: #FF4C4C;
+  --bg-warning: #FFB100;
+  --bg-warning--light: #FFF6E0;
+  --bg-warning--dark: #FFB100;
+  --bg-info: #EDF4FA;
+  --bg-info--light: #EDF4FA;
+  --bg-info--dark: #EDF4FA;
+  --bg-negspace: #fff;
+
+  --hover-bg-brand: #F71963;
+  --hover-bg-base-1: #444;
+  --hover-bg-base-2: #cacbcc;
+  --hover-bg-base-3: #444;
+  --hover-bg-emphasis: #444;
+  --hover-bg-action-1: #2A6DBF;
+  --hover-bg-action-1--disabled: #2A6DBF;
+  --hover-bg-action-2: #e3e4e6;
+  --hover-bg-action-2--disabled: #e3e4e6;
+  --hover-bg-action-3: transparent;
+  --hover-bg-action-3--disabled: transparent;
+  --hover-bg-link: #EDF4FA;
+  --hover-bg-success: #8BC34A;
+  --hover-bg-success--light: #EAFCE3;
+  --hover-bg-success--dark: #8BC34A;
+  --hover-bg-danger: #FF4C4C;
+  --hover-bg-danger--light: #FFE6E6;
+  --hover-bg-danger--dark: #FF4C4C;
+  --hover-bg-warning: #FFB100;
+  --hover-bg-warning--light: #FFF6E0;
+  --hover-bg-warning--dark: #FFB100;
+  --hover-bg-info: #EDF4FA;
+  --hover-bg-info--light: #EDF4FA;
+  --hover-bg-info--dark: #EDF4FA;
+  --hover-bg-negspace: #fff;
+
+  --b--brand: #F71963;
+  --b--base-1: #444;
+  --b--base-2: #E3E4E6;
+  --b--base-3: #444;
+  --b--emphasis: #444;
+  --b--action-1: #368DF7;
+  --b--action-1--disabled: #368DF7;
+  --b--action-2: #f2f4f5;
+  --b--action-2--disabled: #f2f4f5;
+  --b--action-3: transparent;
+  --b--action-3--disabled: transparent;
+  --b--link: #EDF4FA;
+  --b--success: #8BC34A;
+  --b--success--light: #EAFCE3;
+  --b--success--dark: #8BC34A;
+  --b--danger: #FF4C4C;
+  --b--danger--light: #FFE6E6;
+  --b--danger--dark: #FF4C4C;
+  --b--warning: #FFB100;
+  --b--warning--light: #FFF6E0;
+  --b--warning--dark: #FFB100;
+  --b--info: #EDF4FA;
+  --b--info--light: #EDF4FA;
+  --b--info--dark: #EDF4FA;
+  --b--negspace: #fff;
+
+  --hover-b--brand: #F71963;
+  --hover-b--base-1: #444;
+  --hover-b--base-2: #cacbcc;
+  --hover-b--base-3: #444;
+  --hover-b--emphasis: #444;
+  --hover-b--action-1: #2A6DBF;
+  --hover-b--action-1--disabled: #2A6DBF;
+  --hover-b--action-2: #e3e4e6;
+  --hover-b--action-2--disabled: #e3e4e6;
+  --hover-b--action-3: transparent;
+  --hover-b--action-3--disabled: transparent;
+  --hover-b--link: #EDF4FA;
+  --hover-b--success: #8BC34A;
+  --hover-b--success--light: #EAFCE3;
+  --hover-b--success--dark: #8BC34A;
+  --hover-b--danger: #FF4C4C;
+  --hover-b--danger--light: #FFE6E6;
+  --hover-b--danger--dark: #FF4C4C;
+  --hover-b--warning: #FFB100;
+  --hover-b--warning--light: #FFF6E0;
+  --hover-b--warning--dark: #FFB100;
+  --hover-b--info: #EDF4FA;
+  --hover-b--info--light: #EDF4FA;
+  --hover-b--info--dark: #EDF4FA;
+  --hover-b--negspace: #fff;
+}
+
+:global .c-brand { color: var(--c-brand); }
+:global .c-brand--light { color: var(--c-brand--light); }
+:global .c-brand--dark { color: var(--c-brand--dark); }
+:global .c-base-1 { color: var(--c-base-1); }
+:global .c-base-1 { color: var(--c-base-1); }
+:global .c-base-2 { color: var(--c-base-2); }
+:global .c-base-2 { color: var(--c-base-2); }
+:global .c-base-3 { color: var(--c-base-3); }
+:global .c-emphasis { color: var(--c-emphasis); }
+:global .c-action-1 { color: var(--c-action-1); }
+:global .c-action-1--disabled { color: var(--c-action-1--disabled); }
+:global .c-action-2 { color: var(--c-action-2); }
+:global .c-action-2--disabled { color: var(--c-action-2--disabled); }
+:global .c-action-3 { color: var(--c-action-3); }
+:global .c-action-3--disabled { color: var(--c-action-3--disabled); }
+:global .c-link { color: var(--c-link); }
+:global .c-success { color: var(--c-success); }
+:global .c-success--light { color: var(--c-success--light); }
+:global .c-success--dark { color: var(--c-success--dark); }
+:global .c-danger { color: var(--c-danger); }
+:global .c-danger--light { color: var(--c-danger--light); }
+:global .c-danger--dark { color: var(--c-danger--dark); }
+:global .c-warning { color: var(--c-warning); }
+:global .c-warning--light { color: var(--c-warning--light); }
+:global .c-warning--dark { color: var(--c-warning--dark); }
+:global .c-info { color: var(--c-info); }
+:global .c-info--light { color: var(--c-info--light); }
+:global .c-info--dark { color: var(--c-info--dark); }
+:global .c-negspace { color: var(--c-negspace); }
+
+:global .hover-c-brand:hover { color: var(--hover-c-brand); }
+:global .hover-c-brand--light:hover { color: var(--hover-c-brand--light); }
+:global .hover-c-brand--dark:hover { color: var(--hover-c-brand--dark); }
+:global .hover-c-base-1:hover { color: var(--hover-c-base-1); }
+:global .hover-c-base-1:hover { color: var(--hover-c-base-1); }
+:global .hover-c-base-2:hover { color: var(--hover-c-base-2); }
+:global .hover-c-base-2:hover { color: var(--hover-c-base-2); }
+:global .hover-c-base-3:hover { color: var(--hover-c-base-3); }
+:global .hover-c-emphasis:hover { color: var(--hover-c-emphasis); }
+:global .hover-c-action-1:hover { color: var(--hover-c-action-1); }
+:global .hover-c-action-1--disabled:hover { color: var(--hover-c-action-1); }
+:global .hover-c-action-2:hover { color: var(--hover-c-action-2); }
+:global .hover-c-action-2--disabled:hover { color: var(--hover-c-action-2--disabled); }
+:global .hover-c-action-3:hover { color: var(--hover-c-action-3); }
+:global .hover-c-action-3--disabled:hover { color: var(--hover-c-action-3--disabled); }
+:global .hover-c-link:hover { color: var(--hover-c-link); }
+:global .hover-c-success:hover { color: var(--hover-c-success); }
+:global .hover-c-success--light:hover { color: var(--hover-c-success--light); }
+:global .hover-c-success--dark:hover { color: var(--hover-c-success--dark); }
+:global .hover-c-danger:hover { color: var(--hover-c-danger); }
+:global .hover-c-danger--light:hover { color: var(--hover-c-danger--light); }
+:global .hover-c-danger--dark:hover { color: var(--hover-c-danger--dark); }
+:global .hover-c-warning:hover { color: var(--hover-c-warning); }
+:global .hover-c-warning--light:hover { color: var(--hover-c-warning--light); }
+:global .hover-c-warning--dark:hover { color: var(--hover-c-warning--dark); }
+:global .hover-c-info:hover { color: var(--hover-c-info); }
+:global .hover-c-info--light:hover { color: var(--hover-c-info--light); }
+:global .hover-c-info--dark:hover { color: var(--hover-c-info--dark); }
+:global .hover-c-negspace:hover { color: var(--hover-c-negspace); }
+
+:global .bg-brand { background-color: var(--bg-brand); }
+:global .bg-brand--light { background-color: var(--bg-brand--light); }
+:global .bg-brand--dark { background-color: var(--bg-brand--dark); }
+:global .bg-base-1 { background-color: var(--bg-base-1); }
+:global .bg-base-1 { background-color: var(--bg-base-1); }
+:global .bg-base-2 { background-color: var(--bg-base-2); }
+:global .bg-base-2 { background-color: var(--bg-base-2); }
+:global .bg-base-3 { background-color: var(--bg-base-3); }
+:global .bg-emphasis { background-color: var(--bg-emphasis); }
+:global .bg-action-1 { background-color: var(--bg-action-1); }
+:global .bg-action-1--disabled { background-color: var(--bg-action-1); }
+:global .bg-action-2 { background-color: var(--bg-action-2); }
+:global .bg-action-2--disabled { background-color: var(--bg-action-2--disabled); }
+:global .bg-action-3 { background-color: var(--bg-action-3); }
+:global .bg-action-3--disabled { background-color: var(--bg-action-3--disabled); }
+:global .bg-link { background-color: var(--bg-link); }
+:global .bg-success { background-color: var(--bg-success); }
+:global .bg-success--light { background-color: var(--bg-success--light); }
+:global .bg-success--dark { background-color: var(--bg-success--dark); }
+:global .bg-danger { background-color: var(--bg-danger); }
+:global .bg-danger--light { background-color: var(--bg-danger--light); }
+:global .bg-danger--dark { background-color: var(--bg-danger--dark); }
+:global .bg-warning { background-color: var(--bg-warning); }
+:global .bg-warning--light { background-color: var(--bg-warning--light); }
+:global .bg-warning--dark { background-color: var(--bg-warning--dark); }
+:global .bg-info { background-color: var(--bg-info); }
+:global .bg-info--light { background-color: var(--bg-info--light); }
+:global .bg-info--dark { background-color: var(--bg-info--dark); }
+:global .bg-negspace { background-color: var(--bg-negspace); }
+
+:global .hover-bg-brand:hover { background-color: var(--hover-bg-brand); }
+:global .hover-bg-brand--light:hover { background-color: var(--hover-bg-brand--light); }
+:global .hover-bg-brand--dark:hover { background-color: var(--hover-bg-brand--dark); }
+:global .hover-bg-base-1:hover { background-color: var(--hover-bg-base-1); }
+:global .hover-bg-base-1:hover { background-color: var(--hover-bg-base-1); }
+:global .hover-bg-base-2:hover { background-color: var(--hover-bg-base-2); }
+:global .hover-bg-base-2:hover { background-color: var(--hover-bg-base-2); }
+:global .hover-bg-base-3:hover { background-color: var(--hover-bg-base-3); }
+:global .hover-bg-emphasis:hover { background-color: var(--hover-bg-emphasis); }
+:global .hover-bg-action-1:hover { background-color: var(--hover-bg-action-1); }
+:global .hover-bg-action-1--disabled:hover { background-color: var(--hover-bg-action-1--disabled); }
+:global .hover-bg-action-2:hover { background-color: var(--hover-bg-action-2); }
+:global .hover-bg-action-2--disabled:hover { background-color: var(--hover-bg-action-2--disabled); }
+:global .hover-bg-action-3:hover { background-color: var(--hover-bg-action-3); }
+:global .hover-bg-action-3--disabled:hover { background-color: var(--hover-bg-action-3--disabled); }
+:global .hover-bg-link:hover { background-color: var(--hover-bg-link); }
+:global .hover-bg-success:hover { background-color: var(--hover-bg-success); }
+:global .hover-bg-success--light:hover { background-color: var(--hover-bg-success--light); }
+:global .hover-bg-success--dark:hover { background-color: var(--hover-bg-success--dark); }
+:global .hover-bg-danger:hover { background-color: var(--hover-bg-danger); }
+:global .hover-bg-danger--light:hover { background-color: var(--hover-bg-danger--light); }
+:global .hover-bg-danger--dark:hover { background-color: var(--hover-bg-danger--dark); }
+:global .hover-bg-warning:hover { background-color: var(--hover-bg-warning); }
+:global .hover-bg-warning--light:hover { background-color: var(--hover-bg-warning--light); }
+:global .hover-bg-warning--dark:hover { background-color: var(--hover-bg-warning--dark); }
+:global .hover-bg-info:hover { background-color: var(--hover-bg-info); }
+:global .hover-bg-info--light:hover { background-color: var(--hover-bg-info--light); }
+:global .hover-bg-info--dark:hover { background-color: var(--hover-bg-info--dark); }
+:global .hover-bg-negspace:hover { background-color: var(--hover-bg-negspace); }
+
+:global .b--brand { border-color: var(--b--brand); }
+:global .b--brand--light { border-color: var(--b--brand--light); }
+:global .b--brand--dark { border-color: var(--b--brand--dark); }
+:global .b--base-1 { border-color: var(--b--base-1); }
+:global .b--base-1 { border-color: var(--b--base-1); }
+:global .b--base-2 { border-color: var(--b--base-2); }
+:global .b--base-2 { border-color: var(--b--base-2); }
+:global .b--base-3 { border-color: var(--b--base-3); }
+:global .b--emphasis { border-color: var(--b--emphasis); }
+:global .b--action-1 { border-color: var(--b--action-1); }
+:global .b--action-1--disabled { border-color: var(--b--action-1--disabled); }
+:global .b--action-2 { border-color: var(--b--action-2); }
+:global .b--action-2--disabled { border-color: var(--b--action-2--disabled); }
+:global .b--action-3 { border-color: var(--b--action-3); }
+:global .b--action-3--disabled { border-color: var(--b--action-3--disabled); }
+:global .b--link { border-color: var(--b--link); }
+:global .b--success { border-color: var(--b--success); }
+:global .b--success--light { border-color: var(--b--success--light); }
+:global .b--success { border-color: var(--b--success); }
+:global .b--danger { border-color: var(--b--danger); }
+:global .b--danger--light { border-color: var(--b--danger--light); }
+:global .b--danger--dark { border-color: var(--b--danger--dark); }
+:global .b--warning { border-color: var(--b--warning); }
+:global .b--warning--light { border-color: var(--b--warning--light); }
+:global .b--warning--dark { border-color: var(--b--warning--dark); }
+:global .b--info { border-color: var(--b--info); }
+:global .b--info--light { border-color: var(--b--info--light); }
+:global .b--info--dark { border-color: var(--b--info--dark); }
+:global .b--negspace { border-color: var(--b--negspace); }
+
+:global .hover-b--brand:hover { border-color: var(--hover-b--brand); }
+:global .hover-b--brand--light:hover { border-color: var(--hover-b--brand--light); }
+:global .hover-b--brand--dark:hover { border-color: var(--hover-b--brand--dark); }
+:global .hover-b--base-1:hover { border-color: var(--hover-b--base-1); }
+:global .hover-b--base-1:hover { border-color: var(--hover-b--base-1); }
+:global .hover-b--base-2:hover { border-color: var(--hover-b--base-2); }
+:global .hover-b--base-2:hover { border-color: var(--hover-b--base-2); }
+:global .hover-b--base-3:hover { border-color: var(--hover-b--base-3); }
+:global .hover-b--emphasis:hover { border-color: var(--hover-b--emphasis); }
+:global .hover-b--action-1:hover { border-color: var(--hover-b--action-1); }
+:global .hover-b--action-1--disabled:hover { border-color: var(--hover-b--action-1--disabled); }
+:global .hover-b--action-2:hover { border-color: var(--hover-b--action-2); }
+:global .hover-b--action-2--disabled:hover { border-color: var(--hover-b--action-2--disabled); }
+:global .hover-b--action-3:hover { border-color: var(--hover-b--action-3); }
+:global .hover-b--action-3--disabled:hover { border-color: var(--hover-b--action-3--disabled); }
+:global .hover-b--link:hover { border-color: var(--hover-b--link); }
+:global .hover-b--success:hover { border-color: var(--hover-b--success); }
+:global .hover-b--success--light:hover { border-color: var(--hover-b--success--light); }
+:global .hover-b--success--dark:hover { border-color: var(--hover-b--success--dark); }
+:global .hover-b--danger:hover { border-color: var(--hover-b--danger); }
+:global .hover-b--danger--light:hover { border-color: var(--hover-b--danger--light); }
+:global .hover-b--danger--dark:hover { border-color: var(--hover-b--danger--dark); }
+:global .hover-b--warning:hover { border-color: var(--hover-b--warning); }
+:global .hover-b--warning--light:hover { border-color: var(--hover-b--warning--light); }
+:global .hover-b--warning--dark:hover { border-color: var(--hover-b--warning--dark); }
+:global .hover-b--info:hover { border-color: var(--hover-b--info); }
+:global .hover-b--info--light:hover { border-color: var(--hover-b--info--light); }
+:global .hover-b--info--dark:hover { border-color: var(--hover-b--info--dark); }
+:global .hover-b--negspace:hover { border-color: var(--hover-b--negspace); }

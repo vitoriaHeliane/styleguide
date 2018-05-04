@@ -43,27 +43,27 @@ class Textarea extends Component {
     const widthClass = 'w-100'
     const box = 'ma0 border-box'
     const border = 'bw1 br2 b--solid outline-0'
-    const typography = 'near-black f6'
+    const typography = 'c-base-1 f6'
     const padding = 'pv3 ph5'
     let classes = `${widthClass} ${box} ${padding} ${border} ${typography} `
 
     if (active) {
-      classes += 'b--gray '
+      classes += 'b--base-2 '
     } else {
-      classes += 'b--light-gray '
+      classes += 'b--base-2 '
       if (!this.props.disabled) {
         classes += 'hover-b--silver '
       }
     }
 
     if (error || errorMessage) {
-      classes += 'b--red hover-b--red '
+      classes += 'b--danger hover-b--danger '
     }
 
     if (this.props.disabled) {
       classes += 'bg-light-gray bg-light-silver b--light-silver silver '
     } else {
-      classes += 'bg-white '
+      classes += 'bg-base-1 '
     }
 
     return (

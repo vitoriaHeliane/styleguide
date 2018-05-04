@@ -12,19 +12,19 @@ class Toggle extends Component {
 
     let classes = 'flex items-center relative h2 w3 ph1 br4 bg-animate '
     let circleClasses = 'absolute br-100 pa3 mh2 '
-    let iconDenyClasses = 'absolute mh2 dn '
-    let iconCheckClasses = 'absolute mh3 dn '
+    let iconDenyClasses = 'absolute mh2 dn c-danger '
+    let iconCheckClasses = 'absolute mh3 dn c-success '
 
     // Background
     if (semantic) {
       if (!disabled && !checked) {
-        classes += 'bg-red '
+        classes += 'bg-danger '
         iconDenyClasses += 'flex o-100 '
         iconCheckClasses += 'flex o-0 '
       }
 
       if (!disabled && checked) {
-        classes += 'bg-green '
+        classes += 'bg-success '
         iconDenyClasses += 'flex o-0 '
         iconCheckClasses += 'flex o-100 '
       }
@@ -32,11 +32,11 @@ class Toggle extends Component {
       classes += 'bg-near-white '
     } else {
       if (!checked) {
-        classes += 'bg-gray '
+        classes += 'bg-action-2 '
       }
 
       if (checked) {
-        classes += 'bg-blue '
+        classes += 'bg-action-1 '
       }
     }
 
@@ -54,7 +54,7 @@ class Toggle extends Component {
     if (disabled) {
       circleClasses += 'bg-light-gray '
     } else {
-      circleClasses += 'bg-white '
+      circleClasses += 'bg-base-1 '
     }
 
     return (
@@ -79,7 +79,7 @@ class Toggle extends Component {
               transition: 'left .2s ease-out',
             }}
           >
-            <DenyIcon color={config.colors.red} />
+            <DenyIcon color="currentColor" />
           </div>
           <div
             className={iconCheckClasses}
@@ -87,7 +87,7 @@ class Toggle extends Component {
               transition: 'left .2s ease-out',
             }}
           >
-            <CheckIcon color={config.colors.green} />
+            <CheckIcon color="currentColor" />
           </div>
         </div>
         <input

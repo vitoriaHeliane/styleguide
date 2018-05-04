@@ -41,18 +41,18 @@ class Button extends Component {
     }
 
     if (!secondary && !primary && !disabled) {
-      classes += 'b--transparent blue bg-transparent hover-heavy-blue hover-b--transparent '
+      classes += 'c-action-3 hover-c-action-3 bg-action-3 hover-bg-action-3 b--action-3 hover-b--action-3 hover-bg-action-3 '
     }
 
     if (secondary && !disabled) {
-      classes += 'bg-light-silver blue hover-heavy-blue b--light-silver '
+      classes += 'c-action-2 hover-c-action-2 bg-action-2 hover-bg-action-2 b--action-2 '
     }
     if (secondary) {
-      classes += 'hover-b--light-gray hover-bg-light-gray '
+      classes += 'hover-b--action-2 hover-bg-action-2 '
     }
 
     if (primary && !disabled) {
-      classes += 'b--blue bg-blue white hover-bg-heavy-blue hover-b--heavy-blue '
+      classes += 'c-action-1 hover-c-action-1 bg-action-1 hover-bg-action-1 b--action-1 hover-b--action-1 '
     }
 
     if (disabled) {

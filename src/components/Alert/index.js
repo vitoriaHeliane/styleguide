@@ -22,32 +22,32 @@ class Alert extends Component {
     let classes = 'pa5 br2 '
     let showIcon = false
     let Icon = 'div'
-    let color = config.colors['serious-black']
+    let color = 'c-default'
 
     switch (type) {
       case 'success': {
         showIcon = true
-        classes += 'bg-washed-green '
+        classes += 'bg-success--light '
         Icon = SuccessIcon
-        color = config.colors['green']
+        color = 'c-success'
         break
       }
       case 'error': {
         showIcon = true
-        classes += 'bg-washed-red '
+        classes += 'bg-danger--light '
         Icon = FailureIcon
-        color = config.colors['red']
+        color = 'c-danger'
         break
       }
       case 'warning': {
         showIcon = true
-        classes += 'bg-washed-yellow '
+        classes += 'bg-warning--light '
         Icon = WarningIcon
-        color = config.colors['yellow']
+        color = 'c-warning'
         break
       }
       default: {
-        classes += 'bg-washed-blue '
+        classes += 'bg-info--light '
         break
       }
     }
@@ -55,7 +55,9 @@ class Alert extends Component {
     return (
       <div className={`vtex-alert flex justify-between f5 near-black ${classes}`}>
         <div className="flex items-center">
-          {showIcon && <Icon color={color} size={18} />}
+          {showIcon && <span className={color}>
+            <Icon color="currentColor" size={18} />
+          </span>}
 
           <div className={`${showIcon ? 'ph5 flex' : 'pr5'}`}>
             {this.props.children}

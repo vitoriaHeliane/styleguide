@@ -50,7 +50,7 @@ class Dropdown extends Component {
 
     classes += disabled ? 'bg-light-gray ' : 'pointer '
     selectClasses += disabled ? '' : 'pointer '
-    classes += !disabled && valueLabel ? 'near-black ' : 'gray '
+    classes += !disabled && valueLabel ? 'c-base-1 ' : 'gray '
 
     switch (size) {
       case 'large':
@@ -75,17 +75,17 @@ class Dropdown extends Component {
     if (disabled) {
       containerClasses += 'bg-light-gray '
     } else {
-      containerClasses += 'bg-white '
+      containerClasses += 'bg-base-1 '
     }
 
     if (error || errorMessage) {
-      containerClasses += 'ba b--red hover-b--red '
+      containerClasses += 'ba b--danger hover-b--danger '
     } else {
-      containerClasses += 'ba b--light-gray '
+      containerClasses += 'ba b--base-2 '
     }
 
     if (!disabled) {
-      containerClasses += 'hover-b--silver '
+      containerClasses += 'hover-b--base-2 '
     }
 
     return (
@@ -143,10 +143,10 @@ class Dropdown extends Component {
           </div>
         </label>
         {errorMessage && (
-          <div className="red f6 mt3 lh-title">{errorMessage}</div>
+          <div className="c-danger f6 mt3 lh-title">{errorMessage}</div>
         )}
         {helpText && (
-          <div className="mid-gray f6 mt3 lh-title">{helpText}</div>
+          <div className="c-base-3 f6 mt3 lh-title">{helpText}</div>
         )}
       </div>
     )
