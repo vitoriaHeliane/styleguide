@@ -42,7 +42,7 @@
     "watch": "^1.0.2"
   },
   "dependencies": {
-    "react-responsive-modal": "^2.0.1",
+    "react-responsive-modal": "^3.0.0",
     "vtex-tachyons": "^2.3.0"
   }
 }
