@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import config from 'vtex-tachyons/config.json'
+import SearchIcon from '../icon/Search'
+import DenyIcon from '../icon/Deny'
 
 class Input extends Component {
   constructor(props) {
@@ -13,21 +15,32 @@ class Input extends Component {
 
   handleChange = event => {
     this.props.onChange && this.props.onChange(event)
-  }
+  };
 
   handleKeyPress = event => {
     this.props.onKeyPress && this.props.onKeyPress(event)
-  }
+  };
+
+  handleClickClear = event => {
+    this.props.onChange &&
+      this.props.onChange({
+        ...event,
+        target: {
+          ...event.target,
+          value: '',
+        },
+      })
+  };
 
   handleFocus = event => {
     this.setState({ active: true })
     this.props.onFocus && this.props.onFocus(event)
-  }
+  };
 
   handleBlur = event => {
     this.setState({ active: false })
     this.props.onBlur && this.props.onBlur(event)
-  }
+  };
 
   render() {
     const {
@@ -38,88 +51,79 @@ class Input extends Component {
       token,
       helpText,
       dataAttributes,
+      type,
+      disabled,
       prefix,
     } = this.props
     const { active } = this.state
 
-    const dataAttrs = {}
-    for (const key of Object.keys(dataAttributes)) {
-      dataAttrs[`data-${key}`] = dataAttributes[key]
-    }
+    const dataAttrs = Object.keys(dataAttributes).reduce(
+      (acc, key) => {
+        acc[`data-${key}`] = dataAttributes[key]
+        return acc
+      },
+      {}
+    )
 
-    const widthClass = 'w-100'
-    const box = 'ma0 border-box'
-    const border = 'bw1 br2 b--solid outline-0'
-    // On bw1 change, update config.borderRadius[1] below accordingly
+    const borderWidth = 1
+    const border = `bw${borderWidth} br2 b--solid outline-0 ${error || errorMessage ? 'b--red hover-b--red' : ''} `
+    let classes = `w-100 ma0 border-box near-black ${border} ${token ? 'code' : ''} `
 
-    const topBottomHeight = config.borderRadius[1] * 2 // 2 is top AND BOTTOM
-    const prefixPosition = `${config.borderRadius[1]}rem`
-    const calcPrefixHeight = `calc(100% - ${topBottomHeight}rem)`
-    const typography = 'near-black'
-    let classes = `${widthClass} ${box} ${border} ${typography} `
-
-    let prefixClasses =
-      'vtex-input__prefix absolute gray fw5 flex items-center '
-
-    if (token) {
-      classes += 'code '
-    }
-
-    if (active) {
-      classes += 'b--gray '
-    } else {
-      classes += 'b--light-gray '
-      if (!this.props.disabled) {
-        classes += 'hover-b--silver '
-      }
-    }
-
-    if (error || errorMessage) {
-      classes += 'b--red hover-b--red '
-    }
-
-    if (this.props.disabled) {
+    if (disabled) {
       classes += 'bg-light-gray bg-light-silver b--light-silver silver '
     } else {
-      classes += 'bg-white '
+      classes += `bg-white ${active ? 'b--gray' : 'b--light-gray'} hover-b--silver `
     }
+
+    const topBottomHeight = config.borderRadius[borderWidth] * 2
+    const prefixAndSuffixPosition = `${config.borderRadius[1]}rem`
+    const calcPrefixAndSuffixHeight = `calc(100% - ${topBottomHeight}rem)`
+
+    let prefixAndSuffixClasses = 'absolute gray fw5 flex items-center '
+    let iconSize = 16
 
     switch (size) {
       case 'large':
-        classes += `f5 pv4 ${prefix ? 'pl8 pr6' : 'ph6'}`
-        prefixClasses += 'ph4 f5'
-        // iconSize = 18
+        classes += `f5 pv4 ${prefix ? 'pl8 pr6' : 'ph5'}`
+        prefixAndSuffixClasses += 'ph4 f5'
+        iconSize = 18
         break
       case 'x-large':
-        classes += `f4 pv5 ${prefix ? 'pl8 pr7' : 'ph7'}`
-        prefixClasses += 'ph5 f4 '
-        // iconSize = 22
+        classes += `f4 pv5 ${prefix ? 'pl8 pr7' : 'ph5'}`
+        prefixAndSuffixClasses += 'ph5 f4 '
+        iconSize = 22
         break
       default:
         classes += `f6 pv3 ${prefix ? 'pl7 pr5' : 'ph5'}`
-        prefixClasses += 'ph3 fw5 f6 '
-        // iconSize = 16
+        prefixAndSuffixClasses += 'ph3 fw5 f6 '
+        iconSize = 16
         break
     }
 
+    const suffix = type === 'search'
+      ? this.props.value
+        ? <span onClick={this.handleClickClear}>
+          <DenyIcon color={config.colors.blue} size={iconSize - 2} />
+        </span>
+        : <SearchIcon color={config.colors.blue} size={iconSize} />
+      : this.props.suffix
+
     return (
       <label className="vtex-input w-100">
-        {label && (
-          <span className="vtex-input__label db mb3 w-100">{label}</span>
-        )}
+        {label &&
+          <span className="vtex-input__label db mb3 w-100">{label}</span>}
         <div className="flex vtex-input-prefix__group relative">
-          {prefix && (
+          {prefix &&
             <span
               style={{
-                height: calcPrefixHeight,
-                top: prefixPosition,
-                left: prefixPosition,
+                height: calcPrefixAndSuffixHeight,
+                top: prefixAndSuffixPosition,
+                left: prefixAndSuffixPosition,
               }}
-              className={prefixClasses}
+              className={`vtex-input__prefix ${prefixAndSuffixClasses}`}
             >
               {prefix}
-            </span>
-          )}
+            </span>}
           <input
             {...dataAttrs}
             onBlur={this.handleBlur}
@@ -154,11 +158,23 @@ class Input extends Component {
             value={this.props.value}
             id={this.props.id}
           />
+          {suffix &&
+            <span
+              style={{
+                height: calcPrefixAndSuffixHeight,
+                top: prefixAndSuffixPosition,
+                right: prefixAndSuffixPosition,
+              }}
+              className={`vtex-input__suffix ${prefixAndSuffixClasses}`}
+            >
+              {suffix}
+            </span>}
         </div>
-        {errorMessage && (
-          <div className="red f6 mt3 lh-title">{errorMessage}</div>
-        )}
-        {helpText && <div className="mid-gray f6 mt3 lh-title">{helpText}</div>}
+        {errorMessage &&
+          <div className="red f6 mt3 lh-title">{errorMessage}</div>}
+        {!errorMessage &&
+          helpText &&
+          <div className="mid-gray f6 mt3 lh-title">{helpText}</div>}
       </label>
     )
   }
@@ -175,6 +191,7 @@ Input.defaultProps = {
   error: false,
   size: 'regular',
   prefix: '',
+  suffix: '',
 }
 
 Input.propTypes = {
@@ -192,6 +209,8 @@ Input.propTypes = {
   label: PropTypes.string,
   /** Prefix */
   prefix: PropTypes.string,
+  /** Prefix */
+  suffix: PropTypes.string,
   /** Spec attribute */
   accept: PropTypes.string,
   /** Spec attribute */
