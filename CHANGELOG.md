@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- **[BREAKING]** Icons default color is now `currentColor`, which is the current text color
+
 ## [5.6.0] - 2018-08-17
 
 ### Added
