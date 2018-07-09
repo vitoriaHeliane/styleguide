@@ -26,6 +26,9 @@
     "codemod/"
   ],
   "homepage": "https://vtex.github.io/styleguide",
+  "peerDependencies": {
+    "vtex-tachyons": "^2.5.1"
+  },
   "devDependencies": {
     "@vtex/react-scripts": "1.1.10",
     "babel-cli": "^6.26.0",
@@ -48,11 +51,11 @@
     "react-dom": "16.3.1",
     "react-styleguidist": "6.5.3",
     "react-styleguidist-visual": "0.4.0",
+    "vtex-tachyons": "^2.5.1",
     "watch": "^1.0.2"
   },
   "dependencies": {
     "react-responsive-modal": "^2.0.1",
-    "react-virtualized": "^9.19.1",
-    "vtex-tachyons": "^2.5.1"
+    "react-virtualized": "^9.19.1"
   }
 }
