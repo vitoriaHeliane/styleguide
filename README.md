@@ -14,8 +14,10 @@
 ## Usage
 
 ```sh
+yarn add vtex-tachyons # if you don't have tachyons already
 yarn add @vtex/styleguide --exact
 # or
+npm install vtex-tachyons # if you don't have tachyons already
 npm install @vtex/styleguide --save-exact
 ```
 
@@ -79,13 +81,13 @@ import Button from '@vtex/styleguide/lib/Button'
 
 ### Publishing
 
-We use [releasy](https://www.npmjs.com/package/releasy) to publish our styleguide. To publish on both npm and render(VTEX IO), execute the command below: 
+We use [releasy](https://www.npmjs.com/package/releasy) to publish our styleguide. To publish on both npm and render(VTEX IO), execute the command below:
 
 ```sh
-releasy --stable --npm 
+releasy --stable --npm
 ```
 
-Also, if you want to post the changelog on Github Release Notes, is required to configure a Personal Token. [See more here](https://www.npmjs.com/package/releasy#settings). When you have the environment set, add a `--notes` flag, For example: 
+Also, if you want to post the changelog on Github Release Notes, is required to configure a Personal Token. [See more here](https://www.npmjs.com/package/releasy#settings). When you have the environment set, add a `--notes` flag, For example:
 
 ```sh
 releasy --stable --npm --notes
