@@ -1,3 +1,7 @@
+"Tabs enable the user to alternate among related views within the same context." Polaris
+"Tabs organize and allow navigation between groups of content that are related and at the same level of hierarchy." Material
+
+
 Default
 
 ```js

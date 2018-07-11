@@ -1,3 +1,10 @@
+"Modals are overlays that prevent merchants from interacting with the rest of the application until a specific action is taken. They can be disruptive because they require merchants to take an action before they can continue interacting with the rest of Shopify. It should be used thoughtfully and sparingly." Polaris
+
+"Use modal dialogs when you need a user response, to reveal critical information, or to show info without losing the overall context of a page. No other interactions on the main page can be accessed while a modal dialog is active. Modal dialogs are invasive to the user's workflow as they appear above all other content. Their usage is quite powerful, as it focuses the user on a single task." Atlassian
+
+Avoid stacking modals on top of other modals.
+
+
 Default
 
 ```js

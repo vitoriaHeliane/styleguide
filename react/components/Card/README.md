@@ -4,7 +4,7 @@ It performs best when repeated and when each instance shares a similar structure
 
 Do use call-to-actions, but avoid having too many of them inside the same card.
 
-Never nest cards inside cards.
+Avoid nesting cards inside cards.
 
 
 Default

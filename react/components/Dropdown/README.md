@@ -1,3 +1,10 @@
+The Dropdown lets the user pick an option from a list.
+
+Avoid using it with fewer than 4 options, in which case Radio buttons would be better. Also avoid if the list is very very long (like over a few dozens). Most users don't know about the keyboard search feature and will have to scan through all the options. In any case, for the sake of god, always sort the options alphabetically.
+
+This is a stylized button wrapper for the native <select> tag.
+
+
 Sizes
 ```js
 <div>

@@ -1,3 +1,9 @@
+"A table is a good way to showcase a large amount of information which has a variety of columns and data to show for each entity. A table should be used when multiple metrics and categories need to be presented together, and accurate lookup of the data values is more important that showing patterns in the data." Polaris
+
+"Use tables to logically structure content in a grid to make it easier to see relationships and to facilitate understanding. Tables are structured in HTML, so the component only provides structure and content alignment." Atlassian
+
+
+
 Default
 
 ```js

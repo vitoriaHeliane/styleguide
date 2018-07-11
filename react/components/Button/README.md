@@ -1,4 +1,4 @@
-Buttons. Everybody knows buttons. Everybody needs buttons. But do you know how to chose your button?
+Use Buttons to trigger actions or to perform navigation.
 
 ### Chosing a size
 Avoid mixing different button sizes in the same screen. Chose the size based on the density of information that your interface needs.

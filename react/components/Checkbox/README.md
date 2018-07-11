@@ -1,3 +1,13 @@
+A Checkbox is simple solutions for asking the user for a binary, required and indendendent choice. 
+They are always accompanied by a text label, which should be intuitive and provide sufficient context for the user take that decision. Avoid negative labels.
+
+Checkboxes will often require the use of a button (like "SAVE" or "OK") to commit that choice. That means the checkbox shouldn't "autosave"
+
+It may be initialized with a default value.
+
+If the choice could be read as "turning something on or off" do consider using a Toggle.
+
+
 Default
 
 ```js
