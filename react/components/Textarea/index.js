@@ -10,6 +10,14 @@ class Textarea extends Component {
     }
   }
 
+  static CharacterCountdown = props => {
+    let classes = 'mid-gray f6 mt3 '
+    if (props.value <= 10) {
+      classes += 'red'
+    }
+    return <div className={classes}>{props.value}</div>
+  }
+
   handleChange = event => {
     this.props.onChange && this.props.onChange(event)
   }
@@ -95,10 +103,21 @@ class Textarea extends Component {
           {children}
         </textarea>
 
-        {errorMessage && (
-          <div className="red f6 mt3 lh-title">{errorMessage}</div>
-        )}
-        {helpText && <div className="mid-gray f6 mt3 lh-title">{helpText}</div>}
+        <div className="flex justify-between">
+          <div>
+            {errorMessage && (
+              <div className="red f6 mt3 lh-title">{errorMessage}</div>
+            )}
+            {helpText && (
+              <div className="mid-gray f6 mt3 lh-title">{helpText}</div>
+            )}
+          </div>
+          {this.props.characterCountdown && (
+            <Textarea.CharacterCountdown
+              value={this.props.maxLength - this.props.value.length}
+            />
+          )}
+        </div>
       </label>
     )
   }
@@ -163,6 +182,8 @@ Textarea.propTypes = {
   onFocus: PropTypes.func,
   /** onBlur event */
   onBlur: PropTypes.func,
+  /** Character countdown at the bottom right */
+  characterCountdown: PropTypes.bool,
 }
 
 export default Textarea
