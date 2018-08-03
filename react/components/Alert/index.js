@@ -88,7 +88,7 @@ class Alert extends Component {
             className="vtex-alert__close-icon pointer flex items-center pv2"
             onClick={onClose}
           >
-            <CloseIcon color={config.colors['near-black']} size={10} />
+            <CloseIcon color={config.colors['near-black']} size={16} />
           </div>
         )}
       </div>
