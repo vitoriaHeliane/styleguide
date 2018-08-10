@@ -62,7 +62,7 @@ class Alert extends Component {
           <div className="flex items-center flex-grow-1">
             {showIcon && (
               <div>
-                <Icon color={color} size={18} />
+                <Icon block color={color} size={18} />
               </div>
             )}
 
@@ -88,7 +88,7 @@ class Alert extends Component {
             className="vtex-alert__close-icon pointer flex items-center pv2"
             onClick={onClose}
           >
-            <CloseIcon color={config.colors['near-black']} size={16} />
+            <CloseIcon block color={config.colors['near-black']} size={16} />
           </div>
         )}
       </div>
