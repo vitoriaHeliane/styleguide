@@ -19,10 +19,10 @@ class Checkbox extends PureComponent {
           className={classNames(
             'h1 w1 relative ba bw1 br1 mr3 flex justify-center items-center',
             {
-              'b--light-gray pointer': !checked && !disabled,
-              'b--light-gray bg-light-silver': !checked && disabled,
-              'b--blue bg-blue': checked && !disabled,
-              'b--silver bg-silver': checked && disabled,
+              'b--muted-4 pointer': !checked && !disabled,
+              'b--disabled bg-muted-5 c-disabled': !checked && disabled,
+              'b--action-primary bg-action-primary': checked && !disabled,
+              'b--disabled bg-disabled': checked && disabled,
             },
           )}
           style={{
@@ -30,11 +30,11 @@ class Checkbox extends PureComponent {
           }}
         />
         <div className="absolute w1 h1 flex o-100" style={{ left: 2, top: -1.5 }}>
-          <div className="absolute top-0 left-0 bottom-0 overflow-hidden" style={{
+          <div className={`absolute top-0 left-0 bottom-0 overflow-hidden ${disabled ? 'c-on-disabled' : 'c-on-action-primary'}`} style={{
             right: checked ? 0 : '100%',
             transition: 'right 110ms ease-in-out 30ms',
           }}>
-            <CheckIcon size={11} color={disabled ? 'gray' : 'white'} />
+            <CheckIcon size={11} color="currentColor" />
           </div>
         </div>
         <input
@@ -52,9 +52,8 @@ class Checkbox extends PureComponent {
         />
         <label
           className={classNames(
-            'near-black',
-            { gray: disabled },
-            { pointer: !disabled },
+            { 'c-disabled': disabled },
+            { 'c-on-base pointer': !disabled },
           )}
           htmlFor={id}
         >
