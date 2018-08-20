@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import config from 'vtex-tachyons/config.json'
+import SearchIcon from '../icon/Search'
+import DenyIcon from '../icon/Deny'
 
 class Input extends Component {
   constructor(props) {
@@ -17,6 +19,17 @@ class Input extends Component {
 
   handleKeyPress = event => {
     this.props.onKeyPress && this.props.onKeyPress(event)
+  }
+
+  handleClickClear = event => {
+    this.props.onChange &&
+      this.props.onChange({
+        ...event,
+        target: {
+          ...event.target,
+          value: '',
+        },
+      })
   }
 
   handleKeyDown = event => {
@@ -37,6 +50,10 @@ class Input extends Component {
     this.props.onBlur && this.props.onBlur(event)
   }
 
+  handleSubmit = event => {
+    this.props.onSubmit && this.props.onSubmit(event, this.props.value)
+  }
+
   render() {
     const {
       errorMessage,
@@ -49,8 +66,11 @@ class Input extends Component {
       prefix,
       suffixIcon,
       groupBottom,
+      type,
     } = this.props
     const { active } = this.state
+
+    const isSearch = type === 'search'
 
     const dataAttrs = {}
     for (const key of Object.keys(dataAttributes)) {
@@ -97,32 +117,52 @@ class Input extends Component {
       classes += 'bg-white '
     }
 
+    let suffixIconSize = 16
+
     switch (size) {
       case 'large':
-        classes += `f5 pv4 ${prefix ? 'pl8 pr6' : 'ph6'} ${suffixIcon ? 'pr8' : ''}`
+        classes += `f5 pv4 ${prefix ? 'pl8 pr6' : 'ph6'} ${
+          suffixIcon ? 'pr8' : ''
+        }`
         labelClasses += 'f5 '
         prefixAndSuffixClasses += 'ph4 f5'
-        // iconSize = 18
+        suffixIconSize = 18
         break
       case 'x-large':
-        classes += `f4 pv5 ${prefix ? 'pl8 pr7' : 'ph7'} ${suffixIcon ? 'pr8' : ''}`
+        classes += `f4 pv5 ${prefix ? 'pl8 pr7' : 'ph7'} ${
+          suffixIcon ? 'pr8' : ''
+        }`
         labelClasses += 'f5 '
         prefixAndSuffixClasses += 'ph5 f4 '
-        // iconSize = 22
+        suffixIconSize = 22
         break
       default:
-        classes += `f6 pv3 ${prefix ? 'pl7 pr5' : 'ph5'} ${suffixIcon ? 'pr7' : ''}`
+        classes += `f6 pv3 ${prefix ? 'pl7 pr5' : 'ph5'} ${
+          suffixIcon ? 'pr7' : ''
+        }`
         labelClasses += 'f6 '
         prefixAndSuffixClasses += 'ph3 fw5 f6 '
-        // iconSize = 16
+        suffixIconSize = 16
         break
     }
 
-    return (
+    const suffixSearch = isSearch ? (
+      this.props.value ? (
+        <span tabIndex={0} onClick={this.handleClickClear} className="pointer">
+          <DenyIcon color={config.colors.blue} size={suffixIconSize - 2} />
+        </span>
+      ) : (
+        <SearchIcon color={config.colors.blue} size={suffixIconSize} />
+      )
+    ) : (
+      this.props.suffix
+    )
+
+    const showSuffix = isSearch || (!isSearch && suffixIcon)
+
+    const inputContent = (
       <label className="vtex-input w-100">
-        {label && (
-          <span className={labelClasses}>{label}</span>
-        )}
+        {label && <span className={labelClasses}>{label}</span>}
         <div className="flex vtex-input-prefix__group relative">
           {prefix && (
             <span
@@ -173,7 +213,7 @@ class Input extends Component {
             value={this.props.value}
             id={this.props.id}
           />
-          {suffixIcon && (
+          {showSuffix && (
             <span
               style={{
                 height: calcPrefixAndSuffixHeight,
@@ -182,7 +222,8 @@ class Input extends Component {
               }}
               className={prefixAndSuffixClasses}
             >
-              {suffixIcon}
+              {isSearch && suffixSearch}
+              {!isSearch && suffixIcon && suffixIcon}
             </span>
           )}
         </div>
@@ -192,6 +233,12 @@ class Input extends Component {
         {helpText && <div className="mid-gray f6 mt3 lh-title">{helpText}</div>}
       </label>
     )
+
+    if (isSearch) {
+      return <form onSubmit={this.handleSubmit}>{inputContent}</form>
+    }
+
+    return <React.Fragment>{inputContent}</React.Fragment>
   }
 }
 
@@ -206,6 +253,7 @@ Input.defaultProps = {
   error: false,
   size: 'regular',
   prefix: '',
+  suffix: '',
   type: 'text',
 }
 
@@ -224,6 +272,8 @@ Input.propTypes = {
   label: PropTypes.string,
   /** Prefix */
   prefix: PropTypes.string,
+  /** Suffix */
+  suffix: PropTypes.string,
   /** Internal prop used for ref forwarding */
   forwardedRef: PropTypes.func,
   /** Spec attribute */
@@ -296,6 +346,8 @@ Input.propTypes = {
   onFocus: PropTypes.func,
   /** onBlur event */
   onBlur: PropTypes.func,
+  /** onSubmit event */
+  onSubmit: PropTypes.func,
 }
 
 export default React.forwardRef((props, ref) => (
