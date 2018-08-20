@@ -15,11 +15,11 @@ class Input extends Component {
 
   handleChange = event => {
     this.props.onChange && this.props.onChange(event)
-  };
+  }
 
   handleKeyPress = event => {
     this.props.onKeyPress && this.props.onKeyPress(event)
-  };
+  }
 
   handleClickClear = event => {
     this.props.onChange &&
@@ -30,17 +30,21 @@ class Input extends Component {
           value: '',
         },
       })
-  };
+  }
 
   handleFocus = event => {
     this.setState({ active: true })
     this.props.onFocus && this.props.onFocus(event)
-  };
+  }
 
   handleBlur = event => {
     this.setState({ active: false })
     this.props.onBlur && this.props.onBlur(event)
-  };
+  }
+
+  handleSubmit = event => {
+    this.props.onSubmit && this.props.onSubmit(event, this.props.value)
+  }
 
   render() {
     const {
@@ -57,22 +61,27 @@ class Input extends Component {
     } = this.props
     const { active } = this.state
 
-    const dataAttrs = Object.keys(dataAttributes).reduce(
-      (acc, key) => {
-        acc[`data-${key}`] = dataAttributes[key]
-        return acc
-      },
-      {}
-    )
+    const isSearch = type === 'search'
+
+    const dataAttrs = Object.keys(dataAttributes).reduce((acc, key) => {
+      acc[`data-${key}`] = dataAttributes[key]
+      return acc
+    }, {})
 
     const borderWidth = 1
-    const border = `bw${borderWidth} br2 b--solid outline-0 ${error || errorMessage ? 'b--red hover-b--red' : ''} `
-    let classes = `w-100 ma0 border-box near-black ${border} ${token ? 'code' : ''} `
+    const border = `bw${borderWidth} br2 b--solid outline-0 ${
+      error || errorMessage ? 'b--red hover-b--red' : ''
+    } `
+    let classes = `w-100 ma0 border-box near-black ${border} ${
+      token ? 'code' : ''
+    } `
 
     if (disabled) {
       classes += 'bg-light-gray bg-light-silver b--light-silver silver '
     } else {
-      classes += `bg-white ${active ? 'b--gray' : 'b--light-gray'} hover-b--silver `
+      classes += `bg-white ${
+        active ? 'b--gray' : 'b--light-gray'
+      } hover-b--silver `
     }
 
     const topBottomHeight = config.borderRadius[borderWidth] * 2
@@ -100,20 +109,27 @@ class Input extends Component {
         break
     }
 
-    const suffix = type === 'search'
-      ? this.props.value
-        ? <span onClick={this.handleClickClear}>
+    const suffix = isSearch ? (
+      this.props.value ? (
+        <span onClick={this.handleClickClear}>
           <DenyIcon color={config.colors.blue} size={iconSize - 2} />
         </span>
-        : <SearchIcon color={config.colors.blue} size={iconSize} />
-      : this.props.suffix
+      ) : (
+        <SearchIcon color={config.colors.blue} size={iconSize} />
+      )
+    ) : (
+      this.props.suffix
+    )
 
-    return (
+    const showHelpText = !errorMessage && helpText
+
+    const inputContent = (
       <label className="vtex-input w-100">
-        {label &&
-          <span className="vtex-input__label db mb3 w-100">{label}</span>}
+        {label && (
+          <span className="vtex-input__label db mb3 w-100">{label}</span>
+        )}
         <div className="flex vtex-input-prefix__group relative">
-          {prefix &&
+          {prefix && (
             <span
               style={{
                 height: calcPrefixAndSuffixHeight,
@@ -123,7 +139,8 @@ class Input extends Component {
               className={`vtex-input__prefix ${prefixAndSuffixClasses}`}
             >
               {prefix}
-            </span>}
+            </span>
+          )}
           <input
             {...dataAttrs}
             onBlur={this.handleBlur}
@@ -158,7 +175,7 @@ class Input extends Component {
             value={this.props.value}
             id={this.props.id}
           />
-          {suffix &&
+          {suffix && (
             <span
               style={{
                 height: calcPrefixAndSuffixHeight,
@@ -168,15 +185,23 @@ class Input extends Component {
               className={`vtex-input__suffix ${prefixAndSuffixClasses}`}
             >
               {suffix}
-            </span>}
+            </span>
+          )}
         </div>
-        {errorMessage &&
-          <div className="red f6 mt3 lh-title">{errorMessage}</div>}
-        {!errorMessage &&
-          helpText &&
-          <div className="mid-gray f6 mt3 lh-title">{helpText}</div>}
+        {errorMessage && (
+          <div className="red f6 mt3 lh-title">{errorMessage}</div>
+        )}
+        {showHelpText && (
+          <div className="mid-gray f6 mt3 lh-title">{helpText}</div>
+        )}
       </label>
     )
+
+    if (isSearch) {
+      return <form onSubmit={this.handleSubmit}>{inputContent}</form>
+    }
+
+    return <React.Fragment>{inputContent}</React.Fragment>
   }
 }
 
@@ -273,6 +298,8 @@ Input.propTypes = {
   onFocus: PropTypes.func,
   /** onBlur event */
   onBlur: PropTypes.func,
+  /** onSubmit event */
+  onSubmit: PropTypes.func,
 }
 
 export default Input

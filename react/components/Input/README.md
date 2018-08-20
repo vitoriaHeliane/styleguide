@@ -3,11 +3,7 @@ Sizes
 ```js
 <div>
   <div className="mb5">
-    <Input
-      label="Label"
-      placeholder="Placeholder"
-      helpText="Default input"
-    />
+    <Input label="Label" placeholder="Placeholder" helpText="Default input" />
   </div>
 
   <div className="mb5">
@@ -56,7 +52,7 @@ Prefix and suffix
   <div className="mb5">
     <Input
       label="Label"
-      value="test" 
+      value="test"
       helpText="Input with prefix, size x-large"
       size="x-large"
       prefix="R$"
@@ -94,15 +90,21 @@ Prefix and suffix
 </div>
 ```
 
+Search input
+
 ```js
-initialState = { value1: '', value2: '', value3: '' };
-<div className="w-40">
+initialState = { value1: '', value2: '', value3: '' }
+;<div className="w-40">
   <div className="mb5">
     <Input
       type="search"
       placeholder="Search..."
       value={state.value1}
-      onChange={(e) => setState({ value1: e.target.value })}
+      onChange={e => setState({ value1: e.target.value })}
+      onSubmit={(e, value) => {
+        e.preventDefault()
+        console.log("input's:", value)
+      }}
     />
   </div>
 
@@ -111,7 +113,11 @@ initialState = { value1: '', value2: '', value3: '' };
       type="search"
       placeholder="Search..."
       value={state.value2}
-      onChange={(e) => setState({ value2: e.target.value })}
+      onChange={e => setState({ value2: e.target.value })}
+      onSubmit={(e, value) => {
+        e.preventDefault()
+        console.log("input's value:", value)
+      }}
       size="large"
     />
   </div>
@@ -121,7 +127,11 @@ initialState = { value1: '', value2: '', value3: '' };
       type="search"
       placeholder="Search..."
       value={state.value3}
-      onChange={(e) => setState({ value3: e.target.value })}
+      onChange={e => setState({ value3: e.target.value })}
+      onSubmit={(e, value) => {
+        e.preventDefault()
+        console.log("input's value:", value)
+      }}
       size="x-large"
     />
   </div>
@@ -145,7 +155,12 @@ Other variations
   </div>
 
   <div className="mb5">
-    <Input label="Label" value="43" errorMessage="Invalid field value" helpText="Olar" />
+    <Input
+      label="Label"
+      value="43"
+      errorMessage="Invalid field value"
+      helpText="Olar"
+    />
   </div>
 
   <div className="mb5">
